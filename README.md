@@ -34,3 +34,9 @@ Abra o arquivo `index.html` em qualquer navegador moderno.
 - Implementar modo escuro
 - Adicionar página de blog
 
+## Licença
+
+Copyright (c) 2025 Valéria. Todos os direitos reservados.
+
+Este projeto é disponibilizado publicamente apenas para fins de demonstração e portfólio. 
+Nenhuma parte deste projeto pode ser copiada, modificada ou distribuída sem permissão prévia por escrito.
