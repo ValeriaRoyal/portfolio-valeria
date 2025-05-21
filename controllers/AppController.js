@@ -17,6 +17,9 @@ class AppController {
    * Inicializa a aplicação
    */
   initialize() {
+    // Mostrar loader
+    this.showLoader();
+    
     // Registrar rotas
     Router.addRoute('sobre', AboutController);
     Router.addRoute('projetos', ProjectController);
@@ -34,6 +37,11 @@ class AppController {
     
     // Navegar para a seção inicial
     Router.navigateTo('sobre');
+    
+    // Esconder loader quando tudo estiver carregado
+    window.addEventListener('load', () => {
+      this.hideLoader();
+    });
   }
 
   /**
@@ -80,6 +88,39 @@ class AppController {
         header.classList.remove('scrolled');
       }
     });
+  }
+
+  /**
+   * Mostra o loader
+   */
+  showLoader() {
+    let loader = document.querySelector('.loading');
+    
+    if (!loader) {
+      loader = document.createElement('div');
+      loader.className = 'loading';
+      loader.innerHTML = '<div class="loader"></div>';
+      document.body.appendChild(loader);
+    }
+    
+    loader.classList.remove('hidden');
+  }
+
+  /**
+   * Esconde o loader
+   */
+  hideLoader() {
+    const loader = document.querySelector('.loading');
+    if (loader) {
+      loader.classList.add('hidden');
+      
+      // Remover completamente após a transição
+      setTimeout(() => {
+        if (loader.parentNode) {
+          loader.parentNode.removeChild(loader);
+        }
+      }, 500);
+    }
   }
 }
 

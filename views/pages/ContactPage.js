@@ -11,32 +11,38 @@ class ContactPage {
     return `
       <section id="contato" aria-labelledby="contato-heading">
         <div class="container">
-          <h2 id="contato-heading">Contato</h2>
-          <div class="contato-content">
-            <div class="contato-info">
-              <p>Estou disponível para novos projetos e oportunidades. Entre em contato comigo através dos canais abaixo:</p>
-              <ul class="contato-lista">
-                <li><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:${contactInfo.email}" aria-label="Enviar email para ${contactInfo.email}">${contactInfo.email}</a></li>
-                <li><i class="fab fa-linkedin" aria-hidden="true"></i> <a href="${contactInfo.linkedin}" target="_blank" rel="noopener noreferrer" aria-label="Visitar perfil no LinkedIn">LinkedIn</a></li>
-                <li><i class="fab fa-github" aria-hidden="true"></i> <a href="${contactInfo.github}" target="_blank" rel="noopener noreferrer" aria-label="Visitar perfil no GitHub">GitHub</a></li>
-              </ul>
-            </div>
-            <form class="contato-form" id="contact-form" aria-labelledby="form-heading">
-              <h3 id="form-heading" class="sr-only">Formulário de Contato</h3>
-              <div class="form-group">
-                <label for="nome">Nome</label>
-                <input type="text" id="nome" name="nome" required aria-required="true">
-              </div>
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required aria-required="true">
-              </div>
-              <div class="form-group">
-                <label for="mensagem">Mensagem</label>
-                <textarea id="mensagem" name="mensagem" rows="5" required aria-required="true"></textarea>
-              </div>
-              <button type="submit" class="btn">Enviar Mensagem</button>
-            </form>
+          <div class="contato-content fade-up">
+            <p class="contato-intro">E agora?</p>
+            <h2 id="contato-heading" class="contato-heading">Entre em Contato</h2>
+            <p class="contato-description">
+              Estou sempre aberta a novas oportunidades e colaborações. Se você tem um projeto em mente, 
+              uma pergunta ou apenas quer dizer olá, ficarei feliz em conversar!
+            </p>
+            
+            <a href="mailto:${contactInfo.email}" class="btn" aria-label="Enviar email para ${contactInfo.email}">
+              Diga Olá
+            </a>
+            
+            <ul class="contato-lista">
+              <li>
+                <a href="mailto:${contactInfo.email}" aria-label="Enviar email para ${contactInfo.email}">
+                  <i class="fas fa-envelope" aria-hidden="true"></i>
+                  <span>Email</span>
+                </a>
+              </li>
+              <li>
+                <a href="${contactInfo.linkedin}" target="_blank" rel="noopener noreferrer" aria-label="Visitar perfil no LinkedIn">
+                  <i class="fab fa-linkedin" aria-hidden="true"></i>
+                  <span>LinkedIn</span>
+                </a>
+              </li>
+              <li>
+                <a href="${contactInfo.github}" target="_blank" rel="noopener noreferrer" aria-label="Visitar perfil no GitHub">
+                  <i class="fab fa-github" aria-hidden="true"></i>
+                  <span>GitHub</span>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </section>

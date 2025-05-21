@@ -7,27 +7,37 @@ class ProjectModel {
       {
         id: 1,
         title: 'Finanças Pessoais',
-        description: 'Aplicação web para controle financeiro pessoal desenvolvida com React e TypeScript.',
+        description: 'Aplicação web para controle financeiro pessoal com foco em acessibilidade e experiência do usuário. Permite gerenciar receitas, despesas, orçamentos e metas financeiras.',
         image: 'public/images/projeto1.jpg',
-        technologies: ['React', 'TypeScript', 'Styled Components'],
+        technologies: ['React', 'TypeScript', 'Styled Components', 'Jest'],
         github: 'https://github.com/ValeriaRoyal/financas-pessoais',
-        demo: '#'
+        demo: '#',
+        featured: true
       },
       {
         id: 2,
         title: 'E-commerce',
-        description: 'Loja virtual responsiva com carrinho de compras e sistema de pagamento.',
+        description: 'Loja virtual responsiva com carrinho de compras, sistema de pagamento e painel administrativo para gerenciamento de produtos.',
         image: 'public/images/projeto2.jpg',
-        technologies: ['JavaScript', 'HTML5', 'CSS3', 'Node.js'],
+        technologies: ['JavaScript', 'HTML5', 'CSS3', 'Node.js', 'Express'],
         github: '#',
         demo: '#'
       },
       {
         id: 3,
         title: 'App de Tarefas',
-        description: 'Aplicativo de gerenciamento de tarefas com funcionalidades de arrastar e soltar.',
+        description: 'Aplicativo de gerenciamento de tarefas com funcionalidades de arrastar e soltar, categorização e lembretes.',
         image: 'public/images/projeto3.jpg',
         technologies: ['JavaScript', 'HTML5', 'CSS3', 'LocalStorage'],
+        github: '#',
+        demo: '#'
+      },
+      {
+        id: 4,
+        title: 'Blog Pessoal',
+        description: 'Blog com sistema de gerenciamento de conteúdo, categorias, tags e comentários.',
+        image: 'public/images/projeto4.jpg',
+        technologies: ['React', 'Node.js', 'MongoDB', 'Express'],
         github: '#',
         demo: '#'
       }
@@ -61,6 +71,14 @@ class ProjectModel {
     return this.projects.filter(project => 
       project.technologies.some(t => t.toLowerCase().includes(tech.toLowerCase()))
     );
+  }
+
+  /**
+   * Retorna projetos em destaque
+   * @returns {Array} Lista de projetos em destaque
+   */
+  getFeaturedProjects() {
+    return this.projects.filter(project => project.featured);
   }
 }
 
