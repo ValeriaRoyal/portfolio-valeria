@@ -1,13 +1,28 @@
-/* Variáveis CSS - Novo esquema de cores inspirado no site de referência */
+/* Variáveis CSS - Novo esquema de cores */
 :root {
-    --background: #0f0f0f;
-    --surface: #1a1a1a;
-    --primary-color: #2bbc8a; /* Cor mais escura com melhor contraste */
-    --primary-dark: #1a8f68; /* Versão mais escura da nova cor primária */
-    --text-primary: #e6e6e6;
-    --text-secondary: #a0a0a0;
-    --accent: #2bbc8a;
+    --background: black;
+    --surface: #121212;
+    --primary-color: #007bff;
+    --primary-dark: #0056b3;
+    --text-primary: white;
+    --text-secondary: #cccccc;
+    --accent: #007bff;
     --error: #ff6b6b;
+    --success: #2ecc71;
+    --border-radius: 4px;
+    --box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.7);
+    --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    --font-main: 'Inter', sans-serif;
+    --font-heading: 'Poppins', sans-serif;
+    --focus-outline: 3px solid #007bff;
+    --nav-height: 70px;
+    --section-padding: 100px 0;
+    
+    /* Novas variáveis conforme solicitado */
+    --main-bg: black;
+    --main-text-color: white;
+    --highlight-color: #007bff;
+}
     --success: #2ecc71;
     --border-radius: 4px;
     --box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.7);
@@ -34,14 +49,14 @@ html {
 body {
     font-family: var(--font-main);
     line-height: 1.6;
-    color: var(--text-primary);
-    background-color: var(--background);
+    color: var(--main-text-color);
+    background-color: var(--main-bg);
     overflow-x: hidden;
 }
 
 a {
     text-decoration: none;
-    color: #2bbc8a; /* Cor mais escura com melhor contraste (3:1) */
+    color: var(--highlight-color); /* Usar a nova cor de destaque para links */
     transition: var(--transition);
     position: relative;
 }
@@ -64,7 +79,7 @@ a:not(.btn):not(.social-link):after {
     height: 1px;
     bottom: -2px;
     left: 0;
-    background-color: var(--primary-color);
+    background-color: var(--highlight-color);
     transition: var(--transition);
 }
 
@@ -118,7 +133,7 @@ h2::after {
     left: 0;
     width: 60px;
     height: 4px;
-    background-color: var(--primary-color);
+    background-color: var(--highlight-color);
 }
 
 .section-heading {
@@ -146,12 +161,12 @@ h2::after {
 .btn {
     display: inline-block;
     background-color: transparent;
-    color: var(--primary-color);
+    color: var(--highlight-color);
     padding: 12px 24px;
     border-radius: var(--border-radius);
     font-weight: 600;
     transition: var(--transition);
-    border: 1px solid var(--primary-color);
+    border: 1px solid var(--highlight-color);
     cursor: pointer;
     font-family: var(--font-main);
     font-size: 0.9rem;
@@ -168,13 +183,13 @@ h2::after {
     left: 0;
     width: 0%;
     height: 100%;
-    background-color: rgba(100, 255, 218, 0.1);
+    background-color: rgba(0, 123, 255, 0.1);
     transition: var(--transition);
     z-index: -1;
 }
 
 .btn:hover {
-    color: var(--primary-color);
+    color: var(--highlight-color);
 }
 
 .btn:hover::before {
@@ -183,7 +198,7 @@ h2::after {
 
 /* Header */
 header {
-    background-color: rgba(15, 15, 15, 0.8);
+    background-color: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(10px);
     position: fixed;
     width: 100%;
@@ -214,7 +229,7 @@ header h1 {
 }
 
 .logo span {
-    color: var(--primary-color);
+    color: var(--highlight-color);
 }
 
 nav ul {
@@ -231,12 +246,12 @@ nav a {
 }
 
 nav a.active {
-    color: var(--primary-color);
+    color: var(--highlight-color);
 }
 
 nav a::before {
     content: '0' attr(data-num) '.';
-    color: var(--primary-color);
+    color: var(--highlight-color);
     margin-right: 5px;
     font-size: 0.8rem;
 }
@@ -257,7 +272,7 @@ nav a::before {
 }
 
 .hero-intro {
-    color: var(--primary-color);
+    color: var(--highlight-color);
     font-size: 1rem;
     margin-bottom: 20px;
     font-family: var(--font-main);
@@ -301,7 +316,7 @@ nav a::before {
 }
 
 .sobre-texto p strong {
-    color: var(--primary-color);
+    color: var(--highlight-color);
 }
 
 .sobre-imagem {
@@ -317,7 +332,7 @@ nav a::before {
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(100, 255, 218, 0.1);
+    background-color: rgba(0, 123, 255, 0.1);
     border-radius: var(--border-radius);
     z-index: 1;
 }
@@ -339,7 +354,7 @@ nav a::before {
     left: 15px;
     height: 100%;
     width: 100%;
-    border: 2px solid var(--primary-color);
+    border: 2px solid var(--highlight-color);
     border-radius: var(--border-radius);
     z-index: -1;
     transition: var(--transition);
@@ -360,14 +375,14 @@ nav a::before {
 }
 
 .filtro-projetos label {
-    color: var(--primary-color);
+    color: var(--highlight-color);
     font-size: 0.9rem;
 }
 
 .filtro-projetos select {
     padding: 8px 16px;
     border-radius: var(--border-radius);
-    border: 1px solid var(--primary-color);
+    border: 1px solid var(--highlight-color);
     background-color: transparent;
     color: var(--text-primary);
     font-size: 0.9rem;
@@ -377,7 +392,7 @@ nav a::before {
 
 .filtro-projetos select:focus {
     outline: none;
-    box-shadow: 0 0 0 2px rgba(100, 255, 218, 0.3);
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.3);
 }
 
 .projetos-grid {
@@ -410,7 +425,7 @@ nav a::before {
 }
 
 .projeto-card-header .folder-icon {
-    color: var(--primary-color);
+    color: var(--highlight-color);
     font-size: 2rem;
 }
 
@@ -426,7 +441,7 @@ nav a::before {
 }
 
 .projeto-card-header .projeto-links a:hover {
-    color: var(--primary-color);
+    color: var(--highlight-color);
 }
 
 .projeto-card-body {
@@ -501,7 +516,7 @@ nav a::before {
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(100, 255, 218, 0.1);
+    background-color: rgba(0, 123, 255, 0.1);
     z-index: 1;
 }
 
@@ -558,7 +573,7 @@ nav a::before {
     left: 0;
     width: 2px;
     height: 0;
-    background-color: var(--primary-color);
+    background-color: var(--highlight-color);
     transition: var(--transition);
 }
 
@@ -573,7 +588,7 @@ nav a::before {
 .habilidade-card i {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    color: var(--primary-color);
+    color: var(--highlight-color);
 }
 
 .habilidade-card h3 {
@@ -595,7 +610,7 @@ nav a::before {
 
 .skill-progress {
     height: 100%;
-    background-color: var(--primary-color);
+    background-color: var(--highlight-color);
     width: 0%;
     transition: width 1.5s ease-in-out;
 }
@@ -613,7 +628,7 @@ nav a::before {
 }
 
 .contato-intro {
-    color: var(--primary-color);
+    color: var(--highlight-color);
     font-size: 1rem;
     margin-bottom: 20px;
 }
@@ -663,7 +678,7 @@ nav a::before {
     top: -20px;
     left: 0;
     font-size: 0.8rem;
-    color: var(--primary-color);
+    color: var(--highlight-color);
 }
 
 .form-group input,
@@ -682,8 +697,8 @@ nav a::before {
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 2px rgba(100, 255, 218, 0.1);
+    border-color: var(--highlight-color);
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.1);
 }
 
 .form-group input::placeholder,
@@ -707,7 +722,7 @@ nav a::before {
 }
 
 .contato-lista li a:hover {
-    color: var(--primary-color);
+    color: var(--highlight-color);
     transform: translateY(-5px);
 }
 
@@ -771,7 +786,7 @@ footer .container {
 }
 
 .social-link:hover {
-    color: var(--primary-color);
+    color: var(--highlight-color);
     transform: translateY(-5px);
 }
 
@@ -780,7 +795,7 @@ footer .container {
 }
 
 .footer-text a {
-    color: var(--primary-color);
+    color: var(--highlight-color);
 }
 
 /* Animações */
@@ -870,7 +885,7 @@ button:focus {
 .btn:focus,
 .projeto-card:focus-within,
 .habilidade-card:focus-within {
-    box-shadow: 0 0 0 3px var(--primary-color);
+    box-shadow: 0 0 0 3px var(--highlight-color);
 }
 
 /* Melhorar contraste de texto */
@@ -904,9 +919,9 @@ button:focus {
 .loader {
     width: 50px;
     height: 50px;
-    border: 3px solid rgba(100, 255, 218, 0.2);
+    border: 3px solid rgba(0, 123, 255, 0.2);
     border-radius: 50%;
-    border-top-color: var(--primary-color);
+    border-top-color: var(--highlight-color);
     animation: spin 1s ease-in-out infinite;
 }
 
@@ -1029,7 +1044,7 @@ button:focus {
 }
 
 .splash-logo span {
-  color: var(--primary-color);
+  color: var(--highlight-color);
 }
 
 .splash-tagline {
@@ -1061,6 +1076,6 @@ button:focus {
   left: 0;
   height: 100%;
   width: 0;
-  background-color: var(--primary-color);
+  background-color: var(--highlight-color);
   transition: width 0.5s ease-out;
 }
