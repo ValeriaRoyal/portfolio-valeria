@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio de Valéria</title>
-    <link rel="stylesheet" href="public/css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <meta name="description" content="Portfólio de Valéria - Desenvolvedora Front-end especializada em criar experiências digitais acessíveis e intuitivas">
+    <!-- Adicionar Axe para testes de acessibilidade (apenas em desenvolvimento) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axe-core/4.7.0/axe.min.js"></script>
 </head>
 <body>
     <div id="app">
@@ -15,7 +17,49 @@
             <p>Carregando...</p>
         </div>
     </div>
-    
+
     <script type="module" src="js/app.js"></script>
+    <!-- Script para executar testes de acessibilidade -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Aguardar um pouco para que o conteúdo dinâmico seja carregado
+            setTimeout(() => {
+                // Executar análise de acessibilidade
+                axe.run().then(results => {
+                    if (results.violations.length) {
+                        console.group('Axe-core para testes de acessibilidade está ativo');
+                        console.log('New axe issues');
+                        
+                        results.violations.forEach(violation => {
+                            console.log(`${violation.impact}: ${violation.help} ${violation.helpUrl}`);
+                            
+                            violation.nodes.forEach(node => {
+                                console.log('Element:', node.element);
+                                console.log('HTML:', node.html);
+                                console.log(node.failureSummary);
+                                
+                                if (node.target) {
+                                    console.log('Related nodes');
+                                    node.target.forEach(target => {
+                                        const element = document.querySelector(target);
+                                        if (element) {
+                                            console.log('Element:', element);
+                                            console.log('HTML:', element.outerHTML);
+                                        }
+                                    });
+                                }
+                            });
+                        });
+                        
+                        console.groupEnd();
+                    } else {
+                        console.log('Parabéns! Nenhum problema de acessibilidade encontrado.');
+                    }
+                }).catch(err => {
+                    console.error('Erro ao executar testes de acessibilidade:', err);
+                });
+            }, 2000); // Aguardar 2 segundos para o carregamento do conteúdo
+        });
+    </script>
 </body>
 </html>

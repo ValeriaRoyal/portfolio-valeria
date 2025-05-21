@@ -7,6 +7,7 @@ import Header from '../views/components/Header.js';
 import Footer from '../views/components/Footer.js';
 import HomePage from '../views/pages/HomePage.js';
 import ContactModel from '../models/ContactModel.js';
+import AccessibilityManager from '../js/accessibility.js';
 
 /**
  * Controlador principal da aplicação
@@ -24,6 +25,12 @@ class AppController {
     
     // Renderizar estrutura base
     this.renderApp();
+    
+    // Inicializar gerenciador de acessibilidade
+    AccessibilityManager.initialize();
+    
+    // Executar testes de acessibilidade
+    AccessibilityManager.runAccessibilityTests();
     
     // Navegar para a seção inicial
     Router.navigateTo('sobre');
@@ -50,6 +57,8 @@ class AppController {
     app.innerHTML = `
       ${headerHtml}
       ${homeHtml}
+      <main id="main-content">
+      </main>
       ${footerHtml}
     `;
     

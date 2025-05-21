@@ -13,6 +13,7 @@
     --border-radius: 8px;
     --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     --transition: all 0.3s ease;
+    --focus-outline: 3px solid #6200ee;
 }
 
 /* Reset e estilos base */
@@ -386,4 +387,75 @@ footer .container {
     .habilidades-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+}
+
+/* Estilos de acessibilidade */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--primary-color);
+  color: white;
+  padding: 8px;
+  z-index: 1001;
+  transition: top 0.3s;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Melhorar visibilidade de foco para usuários de teclado */
+.keyboard-user :focus {
+  outline: var(--focus-outline);
+  outline-offset: 3px;
+}
+
+/* Esconder visualmente, mas manter acessível para leitores de tela */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Melhorias de contraste para links */
+a:focus {
+  outline: var(--focus-outline);
+  outline-offset: 2px;
+}
+
+/* Melhorias para formulários */
+input:focus, 
+textarea:focus, 
+select:focus, 
+button:focus {
+  outline: var(--focus-outline);
+  outline-offset: 2px;
+}
+
+/* Indicador de foco para elementos interativos */
+.btn:focus,
+.projeto-card:focus-within,
+.habilidade-card:focus-within {
+  box-shadow: 0 0 0 3px var(--primary-color);
+}
+
+/* Melhorar legibilidade */
+body {
+  line-height: 1.6;
+  color: var(--text-primary);
+}
+
+/* Melhorar contraste de texto */
+.text-contrast {
+  color: #000000;
+  background-color: #ffffff;
+  padding: 2px 4px;
+  border-radius: 2px;
 }
