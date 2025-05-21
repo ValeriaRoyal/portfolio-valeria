@@ -30,15 +30,27 @@ class SkillModel {
       },
       {
         id: 5,
-        name: 'Node.js',
-        icon: 'fab fa-node-js',
+        name: 'TypeScript',
+        icon: 'fab fa-js',
         level: 70
       },
       {
         id: 6,
-        name: 'SQL',
-        icon: 'fas fa-database',
+        name: 'Node.js',
+        icon: 'fab fa-node-js',
         level: 65
+      },
+      {
+        id: 7,
+        name: 'UX Design',
+        icon: 'fas fa-pencil-ruler',
+        level: 85
+      },
+      {
+        id: 8,
+        name: 'Testes (QA)',
+        icon: 'fas fa-vial',
+        level: 80
       }
     ];
   }

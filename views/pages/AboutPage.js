@@ -16,13 +16,15 @@ class AboutPage {
           
           <div class="sobre-content">
             <div class="sobre-texto fade-up">
-              <p>Olá! Sou Valéria, desenvolvedora front-end apaixonada por criar interfaces acessíveis e responsivas. Meu foco é desenvolver soluções que combinam design atraente com código limpo e eficiente.</p>
+              <p>Apaixonada por tecnologia e com perfil analítico e criativo, sou Analista de Sistemas formada pela Fatec Praia Grande com 3 anos de experiência na área. Minha trajetória profissional é marcada por <strong>comunicação clara e objetiva, espírito de equipe e comprometimento com o aprendizado contínuo.</strong></p>
               
-              <p>Com experiência em <strong>React</strong>, <strong>TypeScript</strong> e design de interfaces, busco constantemente aprimorar minhas habilidades e aprender novas tecnologias para entregar projetos de alta qualidade.</p>
+              <p>Em minha jornada, tive a oportunidade de atuar em projetos de alta criticidade na área de Serviços Financeiros, onde adquiri experiência em <strong>desenvolvimento de software, testes de qualidade (QA) e Design UX</strong>. A cada desafio, busquei me aprimorar e expandir minhas habilidades, trilhando um caminho sólido com foco em <strong>Design e Qualidade de Software</strong>.</p>
               
-              <p>Minha abordagem de desenvolvimento é centrada no usuário, priorizando a <strong>acessibilidade</strong> e a <strong>experiência do usuário</strong> em todos os projetos que desenvolvo.</p>
+              <p><strong>Acredito que a união de diferentes perspectivas e conhecimentos gera soluções inovadoras e eficientes.</strong> Por isso, busco constantemente aprimorar minhas habilidades e me manter atualizada com as últimas tendências do mercado.</p>
               
-              <p>Atualmente, estou trabalhando em projetos que utilizam as seguintes tecnologias:</p>
+              <p>Além da formação acadêmica, participo ativamente de cursos, palestras e conferências relacionadas à minha área de atuação. Essa busca constante por conhecimento me permite oferecer um trabalho abrangente, de qualidade e com <strong>foco nas necessidades do cliente</strong>.</p>
+              
+              <p>Atualmente, trabalho com as seguintes tecnologias:</p>
               
               <ul class="skills-list">
                 <li>JavaScript (ES6+)</li>
@@ -30,7 +32,7 @@ class AboutPage {
                 <li>TypeScript</li>
                 <li>Node.js</li>
                 <li>HTML5 & CSS3</li>
-                <li>Styled Components</li>
+                <li>Testes Automatizados</li>
               </ul>
             </div>
             

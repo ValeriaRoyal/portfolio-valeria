@@ -6,38 +6,38 @@ class ProjectModel {
     this.projects = [
       {
         id: 1,
-        title: 'Finanças Pessoais',
-        description: 'Aplicação web para controle financeiro pessoal com foco em acessibilidade e experiência do usuário. Permite gerenciar receitas, despesas, orçamentos e metas financeiras.',
+        title: 'Sistema de Gestão Financeira',
+        description: 'Aplicação web para controle financeiro pessoal e empresarial com foco em acessibilidade e experiência do usuário. Permite gerenciar receitas, despesas, orçamentos e metas financeiras com relatórios detalhados e dashboards personalizáveis.',
         image: 'public/images/projeto1.jpg',
-        technologies: ['React', 'TypeScript', 'Styled Components', 'Jest'],
+        technologies: ['React', 'TypeScript', 'Styled Components', 'Jest', 'Node.js'],
         github: 'https://github.com/ValeriaRoyal/financas-pessoais',
         demo: '#',
         featured: true
       },
       {
         id: 2,
-        title: 'E-commerce',
-        description: 'Loja virtual responsiva com carrinho de compras, sistema de pagamento e painel administrativo para gerenciamento de produtos.',
+        title: 'Plataforma E-commerce',
+        description: 'Loja virtual responsiva com carrinho de compras, sistema de pagamento integrado e painel administrativo para gerenciamento de produtos. Implementação de testes automatizados e otimização de performance.',
         image: 'public/images/projeto2.jpg',
-        technologies: ['JavaScript', 'HTML5', 'CSS3', 'Node.js', 'Express'],
+        technologies: ['JavaScript', 'HTML5', 'CSS3', 'Node.js', 'Express', 'MongoDB'],
         github: '#',
         demo: '#'
       },
       {
         id: 3,
-        title: 'App de Tarefas',
-        description: 'Aplicativo de gerenciamento de tarefas com funcionalidades de arrastar e soltar, categorização e lembretes.',
+        title: 'Aplicativo de Produtividade',
+        description: 'Aplicativo de gerenciamento de tarefas com funcionalidades de arrastar e soltar, categorização, lembretes e sincronização entre dispositivos. Design focado em usabilidade e experiência do usuário.',
         image: 'public/images/projeto3.jpg',
-        technologies: ['JavaScript', 'HTML5', 'CSS3', 'LocalStorage'],
+        technologies: ['React Native', 'JavaScript', 'Firebase', 'Redux'],
         github: '#',
         demo: '#'
       },
       {
         id: 4,
-        title: 'Blog Pessoal',
-        description: 'Blog com sistema de gerenciamento de conteúdo, categorias, tags e comentários.',
+        title: 'Dashboard Analítico',
+        description: 'Painel de visualização de dados com gráficos interativos e relatórios personalizáveis. Integração com múltiplas fontes de dados e exportação em diversos formatos.',
         image: 'public/images/projeto4.jpg',
-        technologies: ['React', 'Node.js', 'MongoDB', 'Express'],
+        technologies: ['React', 'D3.js', 'Node.js', 'Express', 'PostgreSQL'],
         github: '#',
         demo: '#'
       }
