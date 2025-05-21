@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio de Valéria</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Valéria</h1>
+            <nav>
+                <ul>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#habilidades">Habilidades</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Desenvolvedora Front-end</h2>
+                <p>Criando experiências digitais acessíveis e intuitivas</p>
+                <a href="#projetos" class="btn">Ver Projetos</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre">
+        <div class="container">
+            <h2>Sobre Mim</h2>
+            <div class="sobre-content">
+                <div class="sobre-texto">
+                    <p>Olá! Sou Valéria, desenvolvedora front-end apaixonada por criar interfaces acessíveis e responsivas. Meu foco é desenvolver soluções que combinam design atraente com código limpo e eficiente.</p>
+                    <p>Com experiência em React, TypeScript e design de interfaces, busco constantemente aprimorar minhas habilidades e aprender novas tecnologias para entregar projetos de alta qualidade.</p>
+                </div>
+                <div class="sobre-imagem">
+                    <img src="images/profile.jpg" alt="Foto de Valéria">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projetos">
+        <div class="container">
+            <h2>Projetos</h2>
+            <div class="projetos-grid">
+                <div class="projeto-card">
+                    <img src="images/projeto1.jpg" alt="Finanças Pessoais">
+                    <h3>Finanças Pessoais</h3>
+                    <p>Aplicação web para controle financeiro pessoal desenvolvida com React e TypeScript.</p>
+                    <div class="projeto-links">
+                        <a href="https://github.com/ValeriaRoyal/financas-pessoais" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="#" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-external-link-alt"></i> Demo
+                        </a>
+                    </div>
+                </div>
+                <!-- Mais projetos serão adicionados aqui -->
+            </div>
+        </div>
+    </section>
+
+    <section id="habilidades">
+        <div class="container">
+            <h2>Habilidades</h2>
+            <div class="habilidades-grid">
+                <div class="habilidade-card">
+                    <i class="fab fa-html5"></i>
+                    <h3>HTML5</h3>
+                </div>
+                <div class="habilidade-card">
+                    <i class="fab fa-css3-alt"></i>
+                    <h3>CSS3</h3>
+                </div>
+                <div class="habilidade-card">
+                    <i class="fab fa-js"></i>
+                    <h3>JavaScript</h3>
+                </div>
+                <div class="habilidade-card">
+                    <i class="fab fa-react"></i>
+                    <h3>React</h3>
+                </div>
+                <div class="habilidade-card">
+                    <i class="fab fa-node-js"></i>
+                    <h3>Node.js</h3>
+                </div>
+                <div class="habilidade-card">
+                    <i class="fas fa-database"></i>
+                    <h3>SQL</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato">
+        <div class="container">
+            <h2>Contato</h2>
+            <div class="contato-content">
+                <div class="contato-info">
+                    <p>Estou disponível para novos projetos e oportunidades. Entre em contato comigo através dos canais abaixo:</p>
+                    <ul class="contato-lista">
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:valeria@exemplo.com">valeria@exemplo.com</a></li>
+                        <li><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/valeria" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                        <li><i class="fab fa-github"></i> <a href="https://github.com/ValeriaRoyal" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                    </ul>
+                </div>
+                <form class="contato-form">
+                    <div class="form-group">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Enviar Mensagem</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Valéria. Todos os direitos reservados.</p>
+            <div class="social-links">
+                <a href="https://github.com/ValeriaRoyal" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/valeria" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com/valeria" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
