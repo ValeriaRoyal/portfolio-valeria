@@ -8,7 +8,7 @@ import Footer from '../views/components/Footer.js';
 import HomePage from '../views/pages/HomePage.js';
 import ContactModel from '../models/ContactModel.js';
 import AccessibilityManager from '../js/accessibility.js';
-import SplashScreen from '../js/splashScreen.js';
+import PS2Animation from '../js/ps2Animation.js';
 
 /**
  * Controlador principal da aplicação
@@ -18,8 +18,8 @@ class AppController {
    * Inicializa a aplicação
    */
   initialize() {
-    // Inicializar splash screen
-    SplashScreen.initialize();
+    // Inicializar animação do PS2
+    PS2Animation.initialize();
     
     // Mostrar loader
     this.showLoader();
