@@ -39,25 +39,12 @@ class AppController {
     // Executar testes de acessibilidade
     AccessibilityManager.runAccessibilityTests();
     
-    // Aguardar o evento de conclusão da animação do PS2 para navegar para a seção inicial
-    document.addEventListener('ps2AnimationComplete', () => {
-      // Navegar para a seção inicial
-      Router.navigateTo('sobre');
-      
-      // Esconder loader quando tudo estiver carregado
-      this.hideLoader();
-    });
+    // Navegar para a seção inicial
+    Router.navigateTo('sobre');
     
-    // Esconder loader quando tudo estiver carregado (fallback)
+    // Esconder loader quando tudo estiver carregado
     window.addEventListener('load', () => {
-      setTimeout(() => {
-        this.hideLoader();
-        
-        // Garantir que a navegação para a seção inicial ocorra
-        if (!Router.getCurrentSection()) {
-          Router.navigateTo('sobre');
-        }
-      }, 6000); // Tempo suficiente para a animação do PS2 terminar
+      this.hideLoader();
     });
   }
 
