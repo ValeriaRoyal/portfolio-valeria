@@ -8,6 +8,7 @@ import Footer from '../views/components/Footer.js';
 import HomePage from '../views/pages/HomePage.js';
 import ContactModel from '../models/ContactModel.js';
 import AccessibilityManager from '../js/accessibility.js';
+import SplashScreen from '../js/splashScreen.js';
 
 /**
  * Controlador principal da aplicação
@@ -17,6 +18,9 @@ class AppController {
    * Inicializa a aplicação
    */
   initialize() {
+    // Inicializar splash screen
+    SplashScreen.initialize();
+    
     // Mostrar loader
     this.showLoader();
     
