@@ -55,10 +55,14 @@ class PS2Animation {
         setTimeout(() => {
           splashScreen.classList.add('hidden');
           
-          // Remover completamente após a transição
+          // Remover completamente após a transição e garantir que o conteúdo seja renderizado
           setTimeout(() => {
             if (splashScreen.parentNode) {
               splashScreen.parentNode.removeChild(splashScreen);
+              
+              // Disparar um evento personalizado para notificar que a animação terminou
+              const event = new CustomEvent('ps2AnimationComplete');
+              document.dispatchEvent(event);
             }
           }, 800);
         }, 3000);
