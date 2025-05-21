@@ -2,11 +2,11 @@
 :root {
     --background: #0f0f0f;
     --surface: #1a1a1a;
-    --primary-color: #64ffda;
-    --primary-dark: #00e5b0;
+    --primary-color: #2bbc8a; /* Cor mais escura com melhor contraste */
+    --primary-dark: #1a8f68; /* Versão mais escura da nova cor primária */
     --text-primary: #e6e6e6;
     --text-secondary: #a0a0a0;
-    --accent: #64ffda;
+    --accent: #2bbc8a;
     --error: #ff6b6b;
     --success: #2ecc71;
     --border-radius: 4px;
@@ -41,13 +41,19 @@ body {
 
 a {
     text-decoration: none;
-    color: var(--primary-color);
+    color: #2bbc8a; /* Cor mais escura com melhor contraste (3:1) */
     transition: var(--transition);
     position: relative;
 }
 
 a:hover {
     color: var(--primary-dark);
+}
+
+/* Garantir que links em blocos de texto sejam distinguíveis */
+p a, li a, .footer-text a {
+    text-decoration: underline; /* Sempre mostrar sublinhado para links em texto */
+    text-underline-offset: 2px; /* Espaçamento do sublinhado para melhor legibilidade */
 }
 
 /* Efeito de sublinhado nos links */
