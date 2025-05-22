@@ -4,10 +4,11 @@
 class ContactModel {
   constructor() {
     this.contactInfo = {
-      email: 'valeria.regina@exemplo.com',
-      linkedin: 'https://linkedin.com/in/valeria-regina',
+      email: 'valeriaroyal.contao@gmail.com',
+      linkedin: 'https://linkedin.com/in/valeriaroyal',
       github: 'https://github.com/ValeriaRoyal',
-      twitter: 'https://twitter.com/valeria_regina'
+      behance: 'https://www.behance.net/valeriaroyal',
+      file: '',
     };
     
     this.messages = [];

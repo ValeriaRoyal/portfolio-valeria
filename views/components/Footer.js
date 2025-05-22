@@ -17,11 +17,14 @@ class Footer {
             <a href="${contactInfo.github}" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
               <i class="fab fa-github" aria-hidden="true"></i>
             </a>
+            <a href="${contactInfo.behance}" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Behance">
+              <i class="fab fa-behance" aria-hidden="true"></i>
+            </a>
             <a href="${contactInfo.linkedin}" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
               <i class="fab fa-linkedin" aria-hidden="true"></i>
             </a>
-            <a href="${contactInfo.twitter}" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Twitter">
-              <i class="fab fa-twitter" aria-hidden="true"></i>
+            <a href="${contactInfo.file}" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Currículo">
+              <i class="fa-solid fa-file-lines" aria-hidden="true"></i>
             </a>
           </div>
           

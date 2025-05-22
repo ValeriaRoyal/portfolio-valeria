@@ -13,10 +13,12 @@ class HomePage {
           <div class="hero-content fade-up">
             <p class="hero-intro">Olá, meu nome é</p>
             <h1 id="hero-heading" class="hero-name">Valéria Regina.</h1>
-            <h2 class="hero-subtitle">Analista de Sistemas & UX Designer.</h2>
+            <h2 class="hero-subtitle">Front-End Engineer & UX/UI Designer.</h2>
             <p class="hero-description">
-              Sou uma profissional especializada em desenvolvimento de software, testes de qualidade e design UX.
-              Atualmente, estou focada em criar soluções digitais que combinam qualidade técnica com excelente experiência do usuário.
+              Sou uma profissional com perfil analítico e criativo, destacando-me pela comunicação clara, 
+              colaboração e comprometimento com o aprendizado contínuo. Valorizo a união de diferentes perspectivas para criar soluções 
+              inovadoras e compartilhar conhecimento. Minha experiência em projetos de alta criticidade reforça minha habilidade de 
+              trabalhar em equipe para alcançar o sucesso.
             </p>
             <div class="hero-cta">
               <a href="#" data-section="projetos" class="btn" role="button">Ver Projetos</a>

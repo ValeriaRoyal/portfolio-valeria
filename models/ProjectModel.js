@@ -14,33 +14,33 @@ class ProjectModel {
         demo: '#',
         featured: true
       },
-      {
-        id: 2,
-        title: 'Plataforma E-commerce',
-        description: 'Loja virtual responsiva com carrinho de compras, sistema de pagamento integrado e painel administrativo para gerenciamento de produtos. Implementação de testes automatizados e otimização de performance.',
-        image: 'public/images/projeto2.jpg',
-        technologies: ['JavaScript', 'HTML5', 'CSS3', 'Node.js', 'Express', 'MongoDB'],
-        github: '#',
-        demo: '#'
-      },
-      {
-        id: 3,
-        title: 'Aplicativo de Produtividade',
-        description: 'Aplicativo de gerenciamento de tarefas com funcionalidades de arrastar e soltar, categorização, lembretes e sincronização entre dispositivos. Design focado em usabilidade e experiência do usuário.',
-        image: 'public/images/projeto3.jpg',
-        technologies: ['React Native', 'JavaScript', 'Firebase', 'Redux'],
-        github: '#',
-        demo: '#'
-      },
-      {
-        id: 4,
-        title: 'Dashboard Analítico',
-        description: 'Painel de visualização de dados com gráficos interativos e relatórios personalizáveis. Integração com múltiplas fontes de dados e exportação em diversos formatos.',
-        image: 'public/images/projeto4.jpg',
-        technologies: ['React', 'D3.js', 'Node.js', 'Express', 'PostgreSQL'],
-        github: '#',
-        demo: '#'
-      }
+      // {
+      //   id: 2,
+      //   title: 'Plataforma E-commerce',
+      //   description: 'Loja virtual responsiva com carrinho de compras, sistema de pagamento integrado e painel administrativo para gerenciamento de produtos. Implementação de testes automatizados e otimização de performance.',
+      //   image: 'public/images/projeto2.jpg',
+      //   technologies: ['JavaScript', 'HTML5', 'CSS3', 'Node.js', 'Express', 'MongoDB'],
+      //   github: '#',
+      //   demo: '#'
+      // },
+      // {
+      //   id: 3,
+      //   title: 'Aplicativo de Produtividade',
+      //   description: 'Aplicativo de gerenciamento de tarefas com funcionalidades de arrastar e soltar, categorização, lembretes e sincronização entre dispositivos. Design focado em usabilidade e experiência do usuário.',
+      //   image: 'public/images/projeto3.jpg',
+      //   technologies: ['React Native', 'JavaScript', 'Firebase', 'Redux'],
+      //   github: '#',
+      //   demo: '#'
+      // },
+      // {
+      //   id: 4,
+      //   title: 'Dashboard Analítico',
+      //   description: 'Painel de visualização de dados com gráficos interativos e relatórios personalizáveis. Integração com múltiplas fontes de dados e exportação em diversos formatos.',
+      //   image: 'public/images/projeto4.jpg',
+      //   technologies: ['React', 'D3.js', 'Node.js', 'Express', 'PostgreSQL'],
+      //   github: '#',
+      //   demo: '#'
+      // }
     ];
   }
 

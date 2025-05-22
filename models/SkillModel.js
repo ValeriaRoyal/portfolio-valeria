@@ -7,51 +7,57 @@ class SkillModel {
       {
         id: 1,
         name: 'HTML5',
-        icon: 'fab fa-html5',
+        icon: 'fa-brands fa-html5',
         level: 90
       },
       {
         id: 2,
         name: 'CSS3',
-        icon: 'fab fa-css3-alt',
-        level: 85
+        icon: 'fa-brands fa-css3-alt',
+        level: 90
       },
       {
         id: 3,
         name: 'JavaScript',
-        icon: 'fab fa-js',
+        icon: 'fa-brands fa-js',
         level: 80
-      },
+      },    
       {
         id: 4,
         name: 'React',
-        icon: 'fab fa-react',
-        level: 75
+        icon: 'fa-brands fa-react',
+        level: 40
       },
       {
         id: 5,
-        name: 'TypeScript',
-        icon: 'fab fa-js',
-        level: 70
+        name: 'Angular',
+        icon: 'fa-brands fa-angular',
+        level: 75
       },
       {
         id: 6,
-        name: 'Node.js',
-        icon: 'fab fa-node-js',
-        level: 65
+        name: 'Vue.js',
+        icon: 'fa-brands fa-vuejs',
+        level: 75
       },
       {
         id: 7,
-        name: 'UX Design',
-        icon: 'fas fa-pencil-ruler',
-        level: 85
+        name: 'Node.js',
+        icon: 'fa-brands fa-node-js',
+        level: 65
       },
       {
         id: 8,
+        name: 'UX Design',
+        icon: 'fa-solid fa-pencil-ruler',
+        level: 75
+      },
+      {
+        id: 9,
         name: 'Testes (QA)',
-        icon: 'fas fa-vial',
-        level: 80
-      }
+        icon: 'fa-solid fa-vial-circle-check',
+        level: 40
+      },
     ];
   }
 

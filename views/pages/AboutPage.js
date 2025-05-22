@@ -23,17 +23,6 @@ class AboutPage {
               <p><strong>Acredito que a união de diferentes perspectivas e conhecimentos gera soluções inovadoras e eficientes.</strong> Por isso, busco constantemente aprimorar minhas habilidades e me manter atualizada com as últimas tendências do mercado.</p>
               
               <p>Além da formação acadêmica, participo ativamente de cursos, palestras e conferências relacionadas à minha área de atuação. Essa busca constante por conhecimento me permite oferecer um trabalho abrangente, de qualidade e com <strong>foco nas necessidades do cliente</strong>.</p>
-              
-              <p>Atualmente, trabalho com as seguintes tecnologias:</p>
-              
-              <ul class="skills-list">
-                <li>JavaScript (ES6+)</li>
-                <li>React</li>
-                <li>TypeScript</li>
-                <li>Node.js</li>
-                <li>HTML5 & CSS3</li>
-                <li>Testes Automatizados</li>
-              </ul>
             </div>
             
             <div class="sobre-imagem fade-up">

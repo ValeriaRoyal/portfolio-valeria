@@ -32,7 +32,7 @@ class PS2Animation {
     // Criar o texto "Sony Computer Entertainment"
     const tagline = document.createElement('div');
     tagline.className = 'ps2-tagline';
-    tagline.textContent = 'Analista de Sistemas & UX Designer';
+    tagline.textContent = 'Front-End Engineer & UX/UI Designer';
     
     // Adicionar elementos ao splash screen
     splashScreen.appendChild(ps2Container);
