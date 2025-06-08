@@ -10,15 +10,38 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Meta tags para SEO e compartilhamento social -->
     <meta name="description" content="Portfólio de Valéria - Desenvolvedora Front-end especializada em criar experiências digitais acessíveis e intuitivas">
+    <meta name="keywords" content="desenvolvedor front-end, web design, portfolio, HTML, CSS, JavaScript, React">
+    <meta name="author" content="Valéria">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://valeria-portfolio.com/">
+    <meta property="og:title" content="Valéria | Desenvolvedora Front-end">
+    <meta property="og:description" content="Portfólio de Valéria - Desenvolvedora Front-end especializada em criar experiências digitais acessíveis e intuitivas">
+    <meta property="og:image" content="images/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://valeria-portfolio.com/">
+    <meta property="twitter:title" content="Valéria | Desenvolvedora Front-end">
+    <meta property="twitter:description" content="Portfólio de Valéria - Desenvolvedora Front-end especializada em criar experiências digitais acessíveis e intuitivas">
+    <meta property="twitter:image" content="images/og-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    
     <!-- Adicionar Axe para testes de acessibilidade (apenas em desenvolvimento) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axe-core/4.7.0/axe.min.js"></script>
 </head>
 <body>
     <div id="app">
         <header class="header">
-            <nav class="navbar">
-                <div class="logo">V.</div>
+            <nav class="navbar" aria-label="Navegação principal">
+                <div class="logo" aria-label="Logo Valéria">V.</div>
                 <ul class="nav-links">
                     <li><a href="#home" class="nav-link">Home</a></li>
                     <li><a href="#sobre" class="nav-link">Sobre</a></li>
@@ -26,11 +49,13 @@
                     <li><a href="#projetos" class="nav-link">Projetos</a></li>
                     <li><a href="#contato" class="nav-link">Contato</a></li>
                 </ul>
-                <div class="theme-toggle">
-                    <i class="fas fa-moon"></i>
+                <div class="theme-toggle" aria-label="Alternar tema claro/escuro" role="button" tabindex="0">
+                    <i class="fas fa-moon" aria-hidden="true"></i>
+                    <span class="sr-only">Alternar tema</span>
                 </div>
-                <div class="menu-toggle">
-                    <i class="fas fa-bars"></i>
+                <div class="menu-toggle" aria-label="Abrir menu" role="button" tabindex="0">
+                    <i class="fas fa-bars" aria-hidden="true"></i>
+                    <span class="sr-only">Menu</span>
                 </div>
             </nav>
         </header>
@@ -48,7 +73,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="scroll-indicator">
+                <div class="scroll-indicator" aria-hidden="true">
                     <div class="mouse"></div>
                     <p>Role para baixo</p>
                 </div>
@@ -61,7 +86,7 @@
                         <div class="about-image" data-aos="fade-right" data-aos-delay="200">
                             <div class="image-container">
                                 <!-- Substitua pelo caminho da sua imagem -->
-                                <img src="images/profile.jpg" alt="Foto de Valéria" onerror="this.src='https://via.placeholder.com/400x400'">
+                                <img src="images/profile.jpg" alt="Foto de Valéria" loading="lazy" onerror="this.src='images/placeholder-profile.jpg'">
                             </div>
                         </div>
                         <div class="about-text" data-aos="fade-left" data-aos-delay="300">
@@ -75,7 +100,7 @@
                                 <div class="skill-tag">UI/UX</div>
                                 <div class="skill-tag">Responsive Design</div>
                             </div>
-                            <a href="#" class="btn btn-secondary">Download CV</a>
+                            <a href="assets/cv-valeria.pdf" class="btn btn-secondary" download>Download CV</a>
                         </div>
                     </div>
                 </div>
@@ -89,42 +114,42 @@
                     </p>
                     <div class="brands-grid" data-aos="fade-up" data-aos-delay="300">
                         <div class="brand-item">
-                            <img src="https://via.placeholder.com/200x100?text=Brand+1" alt="Logo da Marca 1">
+                            <img src="images/brands/brand1.jpg" alt="Logo da Marca 1" loading="lazy" onerror="this.src='images/placeholder-brand.jpg'">
                             <div class="brand-overlay">
                                 <h3>Marca 1</h3>
                                 <p>Desenvolvimento de landing page para campanha sazonal</p>
                             </div>
                         </div>
                         <div class="brand-item">
-                            <img src="https://via.placeholder.com/200x100?text=Brand+2" alt="Logo da Marca 2">
+                            <img src="images/brands/brand2.jpg" alt="Logo da Marca 2" loading="lazy" onerror="this.src='images/placeholder-brand.jpg'">
                             <div class="brand-overlay">
                                 <h3>Marca 2</h3>
                                 <p>Redesign de e-commerce com foco em conversão</p>
                             </div>
                         </div>
                         <div class="brand-item">
-                            <img src="https://via.placeholder.com/200x100?text=Brand+3" alt="Logo da Marca 3">
+                            <img src="images/brands/brand3.jpg" alt="Logo da Marca 3" loading="lazy" onerror="this.src='images/placeholder-brand.jpg'">
                             <div class="brand-overlay">
                                 <h3>Marca 3</h3>
                                 <p>Desenvolvimento de aplicativo web para gestão de clientes</p>
                             </div>
                         </div>
                         <div class="brand-item">
-                            <img src="https://via.placeholder.com/200x100?text=Brand+4" alt="Logo da Marca 4">
+                            <img src="images/brands/brand4.jpg" alt="Logo da Marca 4" loading="lazy" onerror="this.src='images/placeholder-brand.jpg'">
                             <div class="brand-overlay">
                                 <h3>Marca 4</h3>
                                 <p>Criação de dashboard interativo para análise de dados</p>
                             </div>
                         </div>
                         <div class="brand-item">
-                            <img src="https://via.placeholder.com/200x100?text=Brand+5" alt="Logo da Marca 5">
+                            <img src="images/brands/brand5.jpg" alt="Logo da Marca 5" loading="lazy" onerror="this.src='images/placeholder-brand.jpg'">
                             <div class="brand-overlay">
                                 <h3>Marca 5</h3>
                                 <p>Implementação de sistema de pagamento para plataforma digital</p>
                             </div>
                         </div>
                         <div class="brand-item">
-                            <img src="https://via.placeholder.com/200x100?text=Brand+6" alt="Logo da Marca 6">
+                            <img src="images/brands/brand6.jpg" alt="Logo da Marca 6" loading="lazy" onerror="this.src='images/placeholder-brand.jpg'">
                             <div class="brand-overlay">
                                 <h3>Marca 6</h3>
                                 <p>Desenvolvimento de interface para aplicativo móvel</p>
@@ -137,17 +162,17 @@
             <section id="projetos" class="projects-section">
                 <div class="container">
                     <h2 class="section-title" data-aos="fade-up">Meus Projetos</h2>
-                    <div class="projects-filter" data-aos="fade-up" data-aos-delay="200">
-                        <button class="filter-btn active" data-filter="all">Todos</button>
-                        <button class="filter-btn" data-filter="web">Web</button>
-                        <button class="filter-btn" data-filter="design">Design</button>
-                        <button class="filter-btn" data-filter="app">App</button>
+                    <div class="projects-filter" data-aos="fade-up" data-aos-delay="200" role="tablist" aria-label="Filtros de projetos">
+                        <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">Todos</button>
+                        <button class="filter-btn" data-filter="web" role="tab" aria-selected="false">Web</button>
+                        <button class="filter-btn" data-filter="design" role="tab" aria-selected="false">Design</button>
+                        <button class="filter-btn" data-filter="app" role="tab" aria-selected="false">App</button>
                     </div>
                     <div class="projects-grid">
                         <!-- Projeto 1 -->
                         <div class="project-card" data-category="web" data-aos="fade-up" data-aos-delay="300">
                             <div class="project-image">
-                                <img src="https://via.placeholder.com/600x400" alt="Projeto 1">
+                                <img src="images/projects/project1.jpg" alt="Imagem do projeto E-commerce Responsivo" loading="lazy" onerror="this.src='images/placeholder-project.jpg'">
                             </div>
                             <div class="project-info">
                                 <h3 class="project-title">E-commerce Responsivo</h3>
@@ -157,14 +182,14 @@
                                     <span>CSS</span>
                                     <span>JavaScript</span>
                                 </div>
-                                <a href="#" class="project-link">Ver Projeto <i class="fas fa-arrow-right"></i></a>
+                                <a href="projects/ecommerce.html" class="project-link">Ver Projeto <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
                             </div>
                         </div>
                         
                         <!-- Projeto 2 -->
                         <div class="project-card" data-category="design" data-aos="fade-up" data-aos-delay="400">
                             <div class="project-image">
-                                <img src="https://via.placeholder.com/600x400" alt="Projeto 2">
+                                <img src="images/projects/project2.jpg" alt="Imagem do projeto Dashboard Analítico" loading="lazy" onerror="this.src='images/placeholder-project.jpg'">
                             </div>
                             <div class="project-info">
                                 <h3 class="project-title">Dashboard Analítico</h3>
@@ -174,14 +199,14 @@
                                     <span>Chart.js</span>
                                     <span>CSS Grid</span>
                                 </div>
-                                <a href="#" class="project-link">Ver Projeto <i class="fas fa-arrow-right"></i></a>
+                                <a href="projects/dashboard.html" class="project-link">Ver Projeto <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
                             </div>
                         </div>
                         
                         <!-- Projeto 3 -->
                         <div class="project-card" data-category="app" data-aos="fade-up" data-aos-delay="500">
                             <div class="project-image">
-                                <img src="https://via.placeholder.com/600x400" alt="Projeto 3">
+                                <img src="images/projects/project3.jpg" alt="Imagem do projeto App de Produtividade" loading="lazy" onerror="this.src='images/placeholder-project.jpg'">
                             </div>
                             <div class="project-info">
                                 <h3 class="project-title">App de Produtividade</h3>
@@ -191,7 +216,7 @@
                                     <span>LocalStorage</span>
                                     <span>CSS Animations</span>
                                 </div>
-                                <a href="#" class="project-link">Ver Projeto <i class="fas fa-arrow-right"></i></a>
+                                <a href="projects/productivity.html" class="project-link">Ver Projeto <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
                             </div>
                         </div>
                     </div>
@@ -204,38 +229,46 @@
                     <div class="contact-content">
                         <div class="contact-info" data-aos="fade-right" data-aos-delay="200">
                             <div class="contact-item">
-                                <i class="fas fa-envelope"></i>
+                                <i class="fas fa-envelope" aria-hidden="true"></i>
                                 <div>
                                     <h3>Email</h3>
-                                    <p>contato@valeria.com</p>
+                                    <p><a href="mailto:contato@valeria.com" class="contact-link">contato@valeria.com</a></p>
                                 </div>
                             </div>
                             <div class="contact-item">
-                                <i class="fas fa-map-marker-alt"></i>
+                                <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
                                 <div>
                                     <h3>Localização</h3>
                                     <p>São Paulo, Brasil</p>
                                 </div>
                             </div>
                             <div class="social-links">
-                                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                                <a href="#" class="social-link"><i class="fab fa-behance"></i></a>
+                                <a href="https://github.com/ValeriaRoyal" class="social-link" aria-label="GitHub">
+                                    <i class="fab fa-github" aria-hidden="true"></i>
+                                </a>
+                                <a href="https://linkedin.com/in/valeria" class="social-link" aria-label="LinkedIn">
+                                    <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                                </a>
+                                <a href="https://instagram.com/valeria" class="social-link" aria-label="Instagram">
+                                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                                </a>
+                                <a href="https://behance.net/valeria" class="social-link" aria-label="Behance">
+                                    <i class="fab fa-behance" aria-hidden="true"></i>
+                                </a>
                             </div>
                         </div>
-                        <form class="contact-form" data-aos="fade-left" data-aos-delay="300">
+                        <form class="contact-form" data-aos="fade-left" data-aos-delay="300" id="contactForm">
                             <div class="form-group">
                                 <label for="name">Nome</label>
-                                <input type="text" id="name" name="name" required>
+                                <input type="text" id="name" name="name" required aria-required="true">
                             </div>
                             <div class="form-group">
                                 <label for="email">Email</label>
-                                <input type="email" id="email" name="email" required>
+                                <input type="email" id="email" name="email" required aria-required="true">
                             </div>
                             <div class="form-group">
                                 <label for="message">Mensagem</label>
-                                <textarea id="message" name="message" rows="5" required></textarea>
+                                <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
                             </div>
                             <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
                         </form>
