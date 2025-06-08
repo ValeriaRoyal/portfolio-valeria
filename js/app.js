@@ -14,15 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // Filtro de projetos
   setupProjectFilters();
-  
-  // Formulário de contato
-  setupContactForm();
-  
-  // Configuração do tema claro/escuro
-  setupThemeToggle();
-  
-  // Adiciona acessibilidade ao teclado para elementos interativos
-  setupKeyboardAccessibility();
 });
 
 // Configuração da navegação
