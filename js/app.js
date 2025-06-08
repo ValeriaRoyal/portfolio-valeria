@@ -123,6 +123,12 @@ function setupProjectFilters() {
       
       const filterValue = button.getAttribute('data-filter');
       
+      // Atualiza o tabpanel
+      const projectsGrid = document.querySelector('.projects-grid');
+      if (projectsGrid) {
+        projectsGrid.setAttribute('aria-labelledby', `filter-${filterValue}`);
+      }
+      
       // Filtra os projetos usando transições CSS
       projectCards.forEach(card => {
         if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {

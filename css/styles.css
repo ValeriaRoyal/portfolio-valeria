@@ -561,6 +561,8 @@ img {
   border-radius: 20px;
   font-size: var(--font-size-small);
   color: var(--dark-gray-color);
+  display: inline-block;
+  margin-bottom: 0.3rem;
 }
 
 .project-link {
