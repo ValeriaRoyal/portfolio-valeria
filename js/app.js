@@ -8,17 +8,34 @@ document.addEventListener('DOMContentLoaded', () => {
     mirror: false
   });
 
-  // Gerencia a splash screen
+  // Adiciona conteúdo à splash screen
   const splashScreen = document.querySelector('.splash-screen');
+  if (splashScreen) {
+    splashScreen.innerHTML = `
+      <div class="ps2-container">
+        <div class="ps2-cube">
+          <div class="ps2-face">V</div>
+          <div class="ps2-face">A</div>
+          <div class="ps2-face">L</div>
+          <div class="ps2-face">É</div>
+          <div class="ps2-face">R</div>
+          <div class="ps2-face">I</div>
+        </div>
+      </div>
+      <div class="ps2-text">Carregando portfólio...</div>
+    `;
+  }
+
+  // Gerencia a splash screen
   const loading = document.querySelector('.loading');
   
   // Simula carregamento inicial
   setTimeout(() => {
-    splashScreen.classList.remove('active');
-    loading.classList.add('active');
+    if (splashScreen) splashScreen.classList.remove('active');
+    if (loading) loading.classList.add('active');
     
     setTimeout(() => {
-      loading.classList.remove('active');
+      if (loading) loading.classList.remove('active');
     }, 1500);
   }, 2000);
 
@@ -30,6 +47,9 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // Formulário de contato
   setupContactForm();
+  
+  // Configuração do tema claro/escuro
+  setupThemeToggle();
 });
 
 // Configuração da navegação
@@ -38,6 +58,8 @@ function setupNavigation() {
   const menuToggle = document.querySelector('.menu-toggle');
   const navLinks = document.querySelector('.nav-links');
   const links = document.querySelectorAll('.nav-link');
+  
+  if (!header || !menuToggle || !navLinks) return;
   
   // Adiciona classe 'scrolled' ao header quando a página é rolada
   window.addEventListener('scroll', () => {
@@ -56,16 +78,22 @@ function setupNavigation() {
   // Toggle do menu mobile
   menuToggle.addEventListener('click', () => {
     navLinks.classList.toggle('active');
-    menuToggle.querySelector('i').classList.toggle('fa-bars');
-    menuToggle.querySelector('i').classList.toggle('fa-times');
+    const icon = menuToggle.querySelector('i');
+    if (icon) {
+      icon.classList.toggle('fa-bars');
+      icon.classList.toggle('fa-times');
+    }
   });
   
   // Fecha o menu ao clicar em um link (mobile)
   links.forEach(link => {
     link.addEventListener('click', () => {
       navLinks.classList.remove('active');
-      menuToggle.querySelector('i').classList.add('fa-bars');
-      menuToggle.querySelector('i').classList.remove('fa-times');
+      const icon = menuToggle.querySelector('i');
+      if (icon) {
+        icon.classList.add('fa-bars');
+        icon.classList.remove('fa-times');
+      }
     });
   });
   
@@ -95,6 +123,8 @@ function setupNavigation() {
 function setupProjectFilters() {
   const filterButtons = document.querySelectorAll('.filter-btn');
   const projectCards = document.querySelectorAll('.project-card');
+  
+  if (filterButtons.length === 0 || projectCards.length === 0) return;
   
   filterButtons.forEach(button => {
     button.addEventListener('click', () => {
@@ -130,56 +160,69 @@ function setupProjectFilters() {
 function setupContactForm() {
   const contactForm = document.querySelector('.contact-form');
   
-  if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      
-      // Aqui você pode adicionar a lógica para enviar o formulário
-      // Por exemplo, usando fetch para enviar os dados para um backend
-      
-      // Simulação de envio bem-sucedido
-      const formData = new FormData(contactForm);
-      const formValues = Object.fromEntries(formData.entries());
-      
-      console.log('Formulário enviado:', formValues);
-      
-      // Feedback visual (você pode personalizar isso)
-      const submitButton = contactForm.querySelector('button[type="submit"]');
-      const originalText = submitButton.textContent;
-      
-      submitButton.disabled = true;
-      submitButton.textContent = 'Enviando...';
-      
-      setTimeout(() => {
-        alert('Mensagem enviada com sucesso! Obrigado pelo contato.');
-        contactForm.reset();
-        submitButton.disabled = false;
-        submitButton.textContent = originalText;
-      }, 1500);
-    });
-  }
+  if (!contactForm) return;
+  
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    // Aqui você pode adicionar a lógica para enviar o formulário
+    // Por exemplo, usando fetch para enviar os dados para um backend
+    
+    // Simulação de envio bem-sucedido
+    const formData = new FormData(contactForm);
+    const formValues = Object.fromEntries(formData.entries());
+    
+    console.log('Formulário enviado:', formValues);
+    
+    // Feedback visual (você pode personalizar isso)
+    const submitButton = contactForm.querySelector('button[type="submit"]');
+    if (!submitButton) return;
+    
+    const originalText = submitButton.textContent;
+    
+    submitButton.disabled = true;
+    submitButton.textContent = 'Enviando...';
+    
+    setTimeout(() => {
+      alert('Mensagem enviada com sucesso! Obrigado pelo contato.');
+      contactForm.reset();
+      submitButton.disabled = false;
+      submitButton.textContent = originalText;
+    }, 1500);
+  });
 }
 
 // Configuração do tema claro/escuro
-document.querySelector('.theme-toggle').addEventListener('click', () => {
-  document.body.classList.toggle('dark-mode');
+function setupThemeToggle() {
+  const themeToggle = document.querySelector('.theme-toggle');
   
-  const themeIcon = document.querySelector('.theme-toggle i');
-  if (document.body.classList.contains('dark-mode')) {
-    themeIcon.classList.remove('fa-moon');
-    themeIcon.classList.add('fa-sun');
-    localStorage.setItem('theme', 'dark');
-  } else {
-    themeIcon.classList.remove('fa-sun');
-    themeIcon.classList.add('fa-moon');
-    localStorage.setItem('theme', 'light');
+  if (!themeToggle) return;
+  
+  themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    
+    const themeIcon = themeToggle.querySelector('i');
+    if (!themeIcon) return;
+    
+    if (document.body.classList.contains('dark-mode')) {
+      themeIcon.classList.remove('fa-moon');
+      themeIcon.classList.add('fa-sun');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      themeIcon.classList.remove('fa-sun');
+      themeIcon.classList.add('fa-moon');
+      localStorage.setItem('theme', 'light');
+    }
+  });
+  
+  // Verifica o tema salvo no localStorage
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+    const themeIcon = themeToggle.querySelector('i');
+    if (themeIcon) {
+      themeIcon.classList.remove('fa-moon');
+      themeIcon.classList.add('fa-sun');
+    }
   }
-});
-
-// Verifica o tema salvo no localStorage
-const savedTheme = localStorage.getItem('theme');
-if (savedTheme === 'dark') {
-  document.body.classList.add('dark-mode');
-  document.querySelector('.theme-toggle i').classList.remove('fa-moon');
-  document.querySelector('.theme-toggle i').classList.add('fa-sun');
 }
