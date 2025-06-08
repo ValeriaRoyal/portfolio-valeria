@@ -8,37 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
     mirror: false
   });
 
-  // Adiciona conteúdo à splash screen
-  const splashScreen = document.querySelector('.splash-screen');
-  if (splashScreen) {
-    splashScreen.innerHTML = `
-      <div class="ps2-container">
-        <div class="ps2-cube">
-          <div class="ps2-face">V</div>
-          <div class="ps2-face">A</div>
-          <div class="ps2-face">L</div>
-          <div class="ps2-face">É</div>
-          <div class="ps2-face">R</div>
-          <div class="ps2-face">I</div>
-        </div>
-      </div>
-      <div class="ps2-text">Carregando portfólio...</div>
-    `;
-  }
-
-  // Gerencia a splash screen
-  const loading = document.querySelector('.loading');
-  
-  // Simula carregamento inicial
-  setTimeout(() => {
-    if (splashScreen) splashScreen.classList.remove('active');
-    if (loading) loading.classList.add('active');
-    
-    setTimeout(() => {
-      if (loading) loading.classList.remove('active');
-    }, 1500);
-  }, 2000);
-
   // Navegação
   setupNavigation();
   
