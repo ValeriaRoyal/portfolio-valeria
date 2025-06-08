@@ -1,134 +1,120 @@
-/* Estilos para a animação do PlayStation 2 */
+/* Animação inspirada no PlayStation 2 */
+.splash-screen {
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .ps2-container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ps2-logo {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ps2-cube {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  transform-style: preserve-3d;
+  animation: rotateCube 4s linear infinite;
+}
+
+.ps2-face {
   position: absolute;
   width: 100%;
   height: 100%;
-  perspective: 1000px;
-  overflow: hidden;
-  background: linear-gradient(135deg, #000000 0%, #000033 100%);
+  background: rgba(108, 99, 255, 0.7);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  color: white;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
-.ps2-tower {
+.ps2-face:nth-child(1) { transform: translateZ(50px); }
+.ps2-face:nth-child(2) { transform: rotateY(180deg) translateZ(50px); }
+.ps2-face:nth-child(3) { transform: rotateY(90deg) translateZ(50px); }
+.ps2-face:nth-child(4) { transform: rotateY(-90deg) translateZ(50px); }
+.ps2-face:nth-child(5) { transform: rotateX(90deg) translateZ(50px); }
+.ps2-face:nth-child(6) { transform: rotateX(-90deg) translateZ(50px); }
+
+.ps2-text {
   position: absolute;
-  width: 40px;
-  height: 40px;
-  background-color: rgba(0, 123, 255, 0.2);
-  border: 1px solid rgba(0, 123, 255, 0.5);
-  transform-style: preserve-3d;
+  bottom: 50px;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
   opacity: 0;
-  transform: translateZ(-1000px);
-  transition: transform 2s ease-out, opacity 2s ease-out;
+  animation: fadeInOut 4s ease-in-out forwards;
 }
 
-.ps2-tower.animate {
-  opacity: 0.8;
-  transform: translateZ(0);
-}
-
-/* Posicionar as torres em diferentes locais */
-.ps2-tower:nth-child(1) { top: 15%; left: 20%; }
-.ps2-tower:nth-child(2) { top: 25%; left: 40%; }
-.ps2-tower:nth-child(3) { top: 35%; left: 60%; }
-.ps2-tower:nth-child(4) { top: 45%; left: 80%; }
-.ps2-tower:nth-child(5) { top: 55%; left: 15%; }
-.ps2-tower:nth-child(6) { top: 65%; left: 35%; }
-.ps2-tower:nth-child(7) { top: 75%; left: 55%; }
-.ps2-tower:nth-child(8) { top: 85%; left: 75%; }
-.ps2-tower:nth-child(9) { top: 20%; left: 70%; }
-.ps2-tower:nth-child(10) { top: 40%; left: 30%; }
-.ps2-tower:nth-child(11) { top: 60%; left: 50%; }
-.ps2-tower:nth-child(12) { top: 80%; left: 25%; }
-
-/* Animação de rotação para as torres */
-@keyframes rotate {
-  0% { transform: rotateX(0) rotateY(0); }
+@keyframes rotateCube {
+  0% { transform: rotateX(0deg) rotateY(0deg); }
   100% { transform: rotateX(360deg) rotateY(360deg); }
 }
 
-.ps2-tower {
-  animation: rotate 20s linear infinite;
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { opacity: 0; }
 }
 
-/* Logo estilo PS2 */
-.ps2-logo {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: var(--font-heading);
-  font-size: 4rem;
-  font-weight: 700;
-  color: white;
-  text-shadow: 0 0 10px rgba(0, 123, 255, 0.8);
-  opacity: 0;
-  transition: opacity 1s ease-in;
-  z-index: 10;
+/* Modo escuro */
+body.dark-mode {
+  --bg-color: #121212;
+  --text-color: #f8f9fa;
+  --gray-color: #adb5bd;
+  --shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-.ps2-logo span {
-  color: var(--highlight-color);
+body.dark-mode .header {
+  background-color: rgba(18, 18, 18, 0.95);
 }
 
-.ps2-logo.visible {
-  opacity: 1;
+body.dark-mode .projects-section {
+  background-color: #1a1a1a;
 }
 
-/* Tagline estilo PS2 */
-.ps2-tagline {
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, 0);
-  font-family: var(--font-main);
-  font-size: 1.2rem;
-  color: rgba(255, 255, 255, 0.7);
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  opacity: 0;
-  transition: opacity 1s ease-in;
-  z-index: 10;
+body.dark-mode .project-card {
+  background-color: #212121;
 }
 
-.ps2-tagline.visible {
-  opacity: 1;
+body.dark-mode .project-tags span {
+  background-color: #2a2a2a;
+  color: #adb5bd;
 }
 
-/* Partículas flutuantes */
-.ps2-container::before,
-.ps2-container::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-image: 
-    radial-gradient(circle, rgba(0, 123, 255, 0.3) 1px, transparent 1px),
-    radial-gradient(circle, rgba(0, 123, 255, 0.2) 1px, transparent 1px);
-  background-size: 20px 20px, 30px 30px;
-  animation: particleFloat 20s linear infinite;
-  z-index: 1;
+body.dark-mode .social-link {
+  background-color: #2a2a2a;
+  color: #f8f9fa;
 }
 
-.ps2-container::after {
-  background-size: 15px 15px, 25px 25px;
-  animation-duration: 15s;
-  animation-direction: reverse;
+body.dark-mode .contact-form input,
+body.dark-mode .contact-form textarea {
+  background-color: #212121;
+  border-color: #333;
+  color: #f8f9fa;
 }
 
-@keyframes particleFloat {
-  0% { background-position: 0 0, 0 0; }
-  100% { background-position: 100px 100px, -100px -100px; }
-}
-
-/* Efeito de luz */
-.ps2-container::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle at center, rgba(0, 123, 255, 0.1) 0%, transparent 70%);
-  z-index: 2;
+body.dark-mode .footer {
+  background-color: #0a0a0a;
 }
