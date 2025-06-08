@@ -418,7 +418,7 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(108, 99, 255, 0.9);
+  background-color: rgba(89, 81, 218, 0.95); /* Cor mais escura para melhorar contraste */
   color: white;
   display: flex;
   flex-direction: column;
@@ -434,6 +434,11 @@ img {
 .brand-overlay h3 {
   margin-bottom: 1rem;
   font-size: var(--font-size-xl);
+  font-weight: 700; /* Aumentado para melhorar contraste */
+}
+
+.brand-overlay p {
+  font-weight: 500; /* Aumentado para melhorar contraste */
 }
 
 .brand-item:hover .brand-overlay,
