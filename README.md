@@ -1,47 +1,34 @@
-# Portfólio de Valéria
+# 🌟 Portfólio de Valéria Regina
 
-Este é um site de portfólio pessoal desenvolvido para mostrar projetos e habilidades profissionais de forma elegante e interativa, com foco em acessibilidade e experiência do usuário.
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 
-## Soft Skills
+Site de portfólio pessoal desenvolvido para apresentar meus projetos e habilidades profissionais de forma elegante e interativa, com foco em acessibilidade e experiência do usuário.
 
-- **Comunicação eficaz**: Habilidade de transmitir ideias de forma clara e objetiva, tanto verbalmente quanto por escrito
-- **Trabalho em equipe**: Capacidade de colaborar efetivamente com diferentes perfis de profissionais
-- **Resolução de problemas**: Abordagem analítica e criativa para superar desafios técnicos e de negócio
-- **Adaptabilidade**: Flexibilidade para se ajustar a novas tecnologias e metodologias de trabalho
-- **Gestão de tempo**: Organização e priorização de tarefas para cumprir prazos e objetivos
-- **Empatia**: Compreensão das necessidades dos usuários e stakeholders para criar soluções centradas no humano
-- **Pensamento crítico**: Capacidade de analisar situações complexas e tomar decisões fundamentadas
-- **Aprendizado contínuo**: Busca constante por novos conhecimentos e aperfeiçoamento profissional
+## 📋 Índice
 
-## Tecnologias Utilizadas
+- [Sobre](#-sobre)
+- [Projetos Destacados](#-projetos-destacados)
+- [Habilidades Técnicas](#-habilidades-técnicas)
+- [Soft Skills](#-soft-skills)
+- [Tecnologias Utilizadas](#-tecnologias-utilizadas)
+- [Estrutura do Projeto](#-estrutura-do-projeto)
+- [Funcionalidades](#-funcionalidades)
+- [Como Executar](#-como-executar)
+- [Próximos Passos](#-próximos-passos)
+- [Licença](#-licença)
+- [Contato](#-contato)
 
-### Frontend
-- HTML5 semântico
-- CSS3 com variáveis e media queries
-- JavaScript moderno
-- AOS (Animate On Scroll) para animações
-- Font Awesome para ícones
-- Flexbox e Grid para layouts responsivos
-- Swiper.js para carrosséis interativos
+## 🚀 Sobre
 
-### Ferramentas e Tecnologias
-- React, Vue, Angular
-- TypeScript, JavaScript
-- Node.js
-- PostgreSQL, MySQL
-- Git, GitHub
-- Figma, Adobe XD
-- Postman
-- VS Code
+Sou uma desenvolvedora full-stack apaixonada por criar soluções web inovadoras e acessíveis. Este portfólio foi desenvolvido para demonstrar minhas habilidades técnicas, projetos e experiência profissional.
 
-### Acessibilidade e Qualidade
-- Axe-core para testes de acessibilidade
-- Atributos ARIA para melhor navegação por leitores de tela
-- Contraste adequado para melhor legibilidade
-- Navegação por teclado otimizada
-- Landmarks HTML5 para estrutura semântica
+Com formação em desenvolvimento web e experiência em diversas tecnologias modernas, busco constantemente aprimorar meus conhecimentos e aplicá-los em projetos desafiadores que proporcionem excelentes experiências aos usuários.
 
-## Projetos Destacados
+## 💼 Projetos Destacados
 
 ### Finanças Pessoais
 Aplicação web para gerenciamento de finanças pessoais com interface intuitiva para controle de receitas, despesas, orçamentos e metas financeiras.
@@ -50,64 +37,209 @@ Aplicação web para gerenciamento de finanças pessoais com interface intuitiva
 
 **Link:** [https://financas-pessoais-smoky.vercel.app/](https://financas-pessoais-smoky.vercel.app/)
 
-### Dashboard Analítico
-Interface de dashboard para visualização de dados e métricas de negócio.
+**Repositório:** [GitHub](https://github.com/ValeriaRoyal/financas-pessoais)
 
-**Tecnologias:** React, Chart.js, CSS Grid
+### Dashboard Analítico
+Interface de dashboard para visualização de dados e métricas de negócio, com gráficos interativos e filtros dinâmicos.
+
+**Tecnologias:** React, Chart.js, CSS Grid, Context API
+
+**Repositório:** [GitHub](https://github.com/ValeriaRoyal/dashboard-analitico)
 
 ### App de Produtividade
-Aplicativo web para gerenciamento de tarefas e aumento de produtividade.
+Aplicativo web para gerenciamento de tarefas e aumento de produtividade, com funcionalidades de categorização, priorização e lembretes.
 
-**Tecnologias:** JavaScript, LocalStorage, CSS Animations
+**Tecnologias:** JavaScript, LocalStorage, CSS Animations, PWA
 
-## Estrutura do Projeto
+**Repositório:** [GitHub](https://github.com/ValeriaRoyal/app-produtividade)
 
-- `index.html`: Página principal do site
-- `css/styles.css`: Estilos do site
-- `js/app.js`: Funcionalidades JavaScript principais
-- `js/axe-test.js`: Testes de acessibilidade
-- `images/`: Diretório para imagens
-  - `images/projects/`: Imagens dos projetos
-  - `images/tools/`: Ícones de ferramentas e tecnologias
-- `assets/`: Diretório para outros recursos (CV, documentos)
+### Sistema de Gerenciamento de Funcionários
+Aplicação full-stack para gerenciamento de funcionários com CRUD completo, utilizando Angular no frontend e Spring Boot no backend.
 
-## Funcionalidades
+**Tecnologias:** Angular, TypeScript, Spring Boot, JPA, MySQL
 
-- Design totalmente responsivo para todos os dispositivos
-- Animações de scroll para melhor experiência do usuário
-- Seção de Soft Skills com cards interativos
-- Exibição de ferramentas e tecnologias em grid responsivo
-- Carrossel de projetos com 3 projetos por slide
-- Informações de contato e links para redes sociais
-- Navegação suave entre seções
-- Galeria de projetos com filtros por categoria
-- Otimização para SEO com meta tags apropriadas
-- Download de currículo diretamente da página inicial
+**Repositório:** [GitHub](https://github.com/ValeriaRoyal/AngularSpringBoot)
 
-## Como Executar
+### Snake Game
+Recriação do clássico jogo da cobrinha com JavaScript puro, HTML5 Canvas e CSS3.
 
-1. Clone este repositório
-   ```
+**Tecnologias:** JavaScript, HTML5 Canvas, CSS3
+
+**Repositório:** [GitHub](https://github.com/ValeriaRoyal/Snake-Game)
+
+### T-Rex Game
+Recriação do famoso jogo offline do navegador Google Chrome, desenvolvido com JavaScript puro.
+
+**Tecnologias:** JavaScript, HTML5, CSS3
+
+**Repositório:** [GitHub](https://github.com/ValeriaRoyal/T-Rex-Game)
+
+## 💻 Habilidades Técnicas
+
+### Desenvolvimento Frontend
+- HTML5 semântico e acessível
+- CSS3 (Flexbox, Grid, Animações, Variáveis)
+- JavaScript ES6+
+- TypeScript
+- React (Hooks, Context API, Redux)
+- Angular
+- Vue.js
+- Styled Components
+- Bootstrap, Tailwind CSS
+- Testes com Jest e React Testing Library
+
+### Desenvolvimento Backend
+- Node.js
+- Express.js
+- API RESTful
+- Spring Boot
+- Java
+- Python
+- MongoDB
+- PostgreSQL
+- MySQL
+- Autenticação e Autorização (JWT, OAuth)
+
+### DevOps e Ferramentas
+- Git e GitHub
+- Docker
+- CI/CD (GitHub Actions)
+- AWS (S3, EC2, Lambda)
+- Vercel, Netlify, Heroku
+- Metodologias Ágeis (Scrum, Kanban)
+- Figma e Adobe XD
+- VS Code, IntelliJ IDEA
+
+## 🤝 Soft Skills
+
+- **Comunicação Eficaz**: Habilidade de transmitir ideias de forma clara e objetiva, tanto verbalmente quanto por escrito
+- **Trabalho em Equipe**: Capacidade de colaborar efetivamente com diferentes perfis de profissionais
+- **Resolução de Problemas**: Abordagem analítica e criativa para superar desafios técnicos e de negócio
+- **Adaptabilidade**: Flexibilidade para se ajustar a novas tecnologias e metodologias de trabalho
+- **Gestão de Tempo**: Organização e priorização de tarefas para cumprir prazos e objetivos
+- **Empatia**: Compreensão das necessidades dos usuários e stakeholders para criar soluções centradas no humano
+- **Pensamento Crítico**: Capacidade de analisar situações complexas e tomar decisões fundamentadas
+- **Aprendizado Contínuo**: Busca constante por novos conhecimentos e aperfeiçoamento profissional
+## 🔧 Tecnologias Utilizadas
+
+### Frontend
+- HTML5 semântico com landmarks e atributos ARIA
+- CSS3 com variáveis, media queries e animações
+- JavaScript moderno (ES6+)
+- React para componentes interativos
+- TypeScript para tipagem estática
+- AOS (Animate On Scroll) para animações
+- Font Awesome para ícones
+- Flexbox e Grid para layouts responsivos
+- Swiper.js para carrosséis interativos
+
+### Ferramentas de Desenvolvimento
+- Git para controle de versão
+- GitHub para hospedagem de código
+- VS Code como IDE principal
+- Figma para design e prototipação
+- Lighthouse para análise de performance
+- axe DevTools para testes de acessibilidade
+- ESLint e Prettier para padronização de código
+- npm para gerenciamento de pacotes
+
+### Acessibilidade e Qualidade
+- Conformidade com WCAG 2.1 nível AA
+- Atributos ARIA para melhor navegação por leitores de tela
+- Contraste adequado para melhor legibilidade
+- Navegação por teclado otimizada
+- Landmarks HTML5 para estrutura semântica
+- Textos alternativos para imagens
+- Testes de usabilidade
+
+## 📁 Estrutura do Projeto
+
+```
+portfolio-valeria/
+├── index.html              # Página principal
+├── css/
+│   ├── styles.css          # Estilos globais
+│   ├── components/         # Estilos de componentes
+│   └── responsive.css      # Media queries
+├── js/
+│   ├── app.js              # Lógica principal
+│   ├── animations.js       # Configurações de animações
+│   └── accessibility.js    # Melhorias de acessibilidade
+├── assets/
+│   ├── images/             # Imagens do site
+│   │   └── projects/       # Imagens dos projetos
+│   ├── icons/              # Ícones e logos
+│   └── documents/          # PDFs e outros documentos
+└── README.md               # Documentação do projeto
+```
+## ✨ Funcionalidades
+
+- **Design Responsivo**: Adaptação perfeita para dispositivos móveis, tablets e desktops
+- **Animações de Scroll**: Elementos que aparecem com animações suaves durante a navegação
+- **Modo Escuro/Claro**: Alternância entre temas para melhor experiência visual
+- **Navegação Intuitiva**: Menu de navegação fixo com rolagem suave entre seções
+- **Galeria de Projetos**: Exibição de projetos com filtros por categoria e tecnologia
+- **Formulário de Contato**: Integração com serviço de email para receber mensagens
+- **Otimização SEO**: Meta tags e estrutura semântica para melhor indexação
+- **Carregamento Otimizado**: Lazy loading de imagens e recursos para melhor performance
+- **Acessibilidade**: Navegação completa por teclado e compatibilidade com leitores de tela
+- **Internacionalização**: Suporte para múltiplos idiomas (Português e Inglês)
+
+## 🚀 Como Executar
+
+1. **Clone o repositório**:
+   ```bash
    git clone https://github.com/ValeriaRoyal/portfolio-valeria.git
    ```
-2. Navegue até a pasta do projeto
-   ```
+
+2. **Navegue até a pasta do projeto**:
+   ```bash
    cd portfolio-valeria
    ```
-3. Abra o arquivo `index.html` em qualquer navegador moderno
-4. Alternativamente, use uma extensão como Live Server no VS Code para desenvolvimento
 
-## Próximos Passos
+3. **Abra o arquivo index.html em um navegador**:
+   - Você pode simplesmente abrir o arquivo no navegador
+   - Ou usar uma extensão como Live Server no VS Code:
+     ```bash
+     code . # Abre o VS Code na pasta atual
+     # Instale a extensão Live Server e clique em "Go Live"
+     ```
 
-- Adicionar mais projetos ao portfólio
-- Implementar modo escuro completo
-- Melhorar a performance com lazy loading de imagens
-- Otimizar ainda mais a acessibilidade
-- Integrar analytics para monitoramento de visitas
+4. **Para desenvolvimento**:
+   - Instale as dependências (opcional, para ferramentas de desenvolvimento):
+     ```bash
+     npm install
+     ```
+   - Execute o script de desenvolvimento:
+     ```bash
+     npm run dev
+     ```
 
-## Licença
+## 🔮 Próximos Passos
 
-Copyright (c) 2025 Valéria. Todos os direitos reservados.
+- [ ] Implementar blog integrado com artigos técnicos
+- [ ] Adicionar mais projetos ao portfólio
+- [ ] Melhorar a performance com otimização de imagens
+- [ ] Implementar animações mais avançadas com GSAP
+- [ ] Adicionar testes automatizados com Cypress
+- [ ] Integrar CMS headless para gerenciamento de conteúdo
+- [ ] Desenvolver versão em PWA para instalação
+- [ ] Implementar analytics para monitoramento de visitas
 
-Este projeto é disponibilizado publicamente apenas para fins de demonstração e portfólio. 
+## 📄 Licença
+
+Copyright © 2025 Valéria Regina. Todos os direitos reservados.
+
+Este projeto é disponibilizado publicamente apenas para fins de demonstração e portfólio.
 Nenhuma parte deste projeto pode ser copiada, modificada ou distribuída sem permissão prévia por escrito.
+
+## 📬 Contato
+
+- **Email**: [valeriaregina.dev@gmail.com](mailto:valeriaregina.dev@gmail.com)
+- **LinkedIn**: [linkedin.com/in/valeria-regina](https://www.linkedin.com/in/valeria-regina)
+- **GitHub**: [github.com/ValeriaRoyal](https://github.com/ValeriaRoyal)
+- **Website**: [valeriaregina.dev](https://valeriaregina.dev)
+
+---
+
+Desenvolvido com ❤️ por Valéria Regina
