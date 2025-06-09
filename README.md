@@ -50,9 +50,10 @@ Interface de dashboard para visualização de dados e métricas de negócio.
 Aplicação web para gerenciamento de finanças pessoais com interface intuitiva para controle de receitas, despesas, orçamentos e metas financeiras.
 
 **Tecnologias:** Figma, Wireframe, UX/UI Design
-**Link:** [https://www.figma.com/proto/FXa46l3NlRTCt9KkmAjMqg/Assistente-de-plano?node-id=1-5&t=FxKqBnvhIkK1xlAh-1]
-(https://www.figma.com/proto/FXa46l3NlRTCt9KkmAjMqg/Assistente-de-plano?node-id=1-5&t=FxKqBnvhIkK1xlAh-1)
 
+**Link:** ([https://www.figma.com/proto/FXa46l3NlRTCt9KkmAjMqg/Assistente-de-plano?node-id=1-5&t=FxKqBnvhIkK1xlAh-1](https://www.figma.com/proto/FXa46l3NlRTCt9KkmAjMqg/Assistente-de-plano?node-id=1-5&t=FxKqBnvhIkK1xlAh-1))
+
+**Tecnologias:** Figma, Wireframe, UX/UI Design
 
 ## 💻 Habilidades Técnicas
 
