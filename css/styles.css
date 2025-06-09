@@ -130,16 +130,19 @@ img {
   margin-bottom: 3rem;
   position: relative;
   display: inline-block;
+  text-align: center;
+  width: 100%;
 }
 
 .section-title::after {
   content: '';
   position: absolute;
-  left: 0;
+  left: 50%;
   bottom: -10px;
   width: 60px;
   height: 4px;
   background-color: var(--primary-color);
+  transform: translateX(-50%);
 }
 
 .highlight {
@@ -357,7 +360,7 @@ img {
   font-weight: 700; /* Aumentado de 500 para 700 */
 }
 
-/* Brands Section */
+/* Brands Section (Ferramentas) */
 .brands-section {
   padding: 8rem 0;
   background-color: #f0f0f0;
@@ -371,15 +374,30 @@ img {
   font-size: var(--font-size-medium);
 }
 
-.brands-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 2rem;
+/* Swiper Styles */
+.brands-swiper {
+  width: 100%;
+  padding-bottom: 60px; /* Espaço para paginação */
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--primary-color);
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--primary-color);
 }
 
 .brand-item {
   position: relative;
   height: 200px;
+  width: 300px;
   background-color: white;
   border-radius: var(--border-radius);
   overflow: hidden;
@@ -392,10 +410,11 @@ img {
 }
 
 .brand-item img {
-  max-height: 80px;
+  max-height: 100px;
+  max-width: 100px;
   object-fit: contain;
-  filter: grayscale(100%);
-  opacity: 0.7;
+  filter: grayscale(0%);
+  opacity: 1;
   transition: var(--transition);
 }
 
@@ -436,8 +455,7 @@ img {
 
 .brand-item:hover img,
 .brand-item:focus-within img {
-  filter: grayscale(0%);
-  opacity: 1;
+  transform: scale(1.1);
 }
 
 /* Projects Section */
@@ -489,10 +507,17 @@ img {
   width: 100%;
 }
 
-.projects-grid {
+/* Swiper para projetos */
+.projects-swiper {
+  width: 100%;
+  padding-bottom: 60px; /* Espaço para paginação */
+}
+
+.projects-slide-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
+  padding: 0 1rem;
 }
 
 .project-card {
@@ -501,6 +526,9 @@ img {
   overflow: hidden;
   box-shadow: var(--shadow);
   transition: var(--transition);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .project-card:hover,
@@ -512,7 +540,7 @@ img {
 .project-image {
   position: relative;
   overflow: hidden;
-  height: 250px;
+  height: 200px;
 }
 
 .project-image img {
@@ -529,6 +557,9 @@ img {
 
 .project-info {
   padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .project-title {
@@ -566,6 +597,7 @@ img {
   color: #4a43b7; /* Cor mais escura para melhorar contraste */
   font-weight: 700; /* Aumentado de 600 para 700 */
   font-size: var(--font-size-base);
+  margin-top: auto;
 }
 
 .project-link i {
@@ -819,6 +851,10 @@ body.dark-mode .filter-btn:focus {
     max-width: 500px;
     margin: 0 auto;
   }
+  
+  .projects-slide-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
@@ -860,17 +896,6 @@ body.dark-mode .filter-btn:focus {
   .menu-toggle {
     display: block;
   }
-    transition: var(--transition);
-    z-index: 99;
-  }
-  
-  .nav-links.active {
-    left: 0;
-  }
-  
-  .menu-toggle {
-    display: block;
-  }
   
   .section-title {
     text-align: center;
@@ -878,16 +903,7 @@ body.dark-mode .filter-btn:focus {
     margin-right: auto;
   }
   
-  .section-title::after {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .brands-grid {
+  .projects-slide-grid {
     grid-template-columns: 1fr;
   }
 }
@@ -934,4 +950,236 @@ body.dark-mode .filter-btn:focus {
   .skills {
     justify-content: center;
   }
+}
+body.dark-mode .brands-section {
+  background-color: #1a1a1a;
+}
+
+body.dark-mode .swiper-button-next,
+body.dark-mode .swiper-button-prev {
+  color: #a5a0ff; /* Cor mais clara para melhorar contraste no modo escuro */
+}
+
+body.dark-mode .swiper-pagination-bullet-active {
+  background-color: #a5a0ff; /* Cor mais clara para melhorar contraste no modo escuro */
+}
+/* Estilos para o modo escuro na seção de projetos */
+body.dark-mode .projects-section {
+  background-color: #1a1a1a;
+}
+
+body.dark-mode .project-card {
+  background-color: #212121;
+}
+
+body.dark-mode .project-tags span {
+  background-color: #2a2a2a;
+  color: #adb5bd;
+}
+
+body.dark-mode .project-link {
+  color: #a5a0ff; /* Cor mais clara para melhorar contraste no modo escuro */
+}
+
+body.dark-mode .swiper-button-next,
+body.dark-mode .swiper-button-prev {
+  color: #a5a0ff; /* Cor mais clara para melhorar contraste no modo escuro */
+}
+
+body.dark-mode .swiper-pagination-bullet-active {
+  background-color: #a5a0ff; /* Cor mais clara para melhorar contraste no modo escuro */
+}
+/* Tools Section */
+.tools-section {
+  padding: 8rem 0;
+  background-color: #f0f0f0;
+}
+
+.section-description {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  color: var(--dark-gray-color);
+  font-size: var(--font-size-medium);
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+.tool-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.tool-icon {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.tool-icon img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.tool-name {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  margin: 0;
+  color: var(--text-color);
+}
+
+.tool-item:hover .tool-icon {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsividade para a seção de ferramentas */
+@media (min-width: 992px) {
+  .tools-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .tools-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .tools-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Modo escuro para a seção de ferramentas */
+body.dark-mode .tools-section {
+  background-color: #1a1a1a;
+}
+
+body.dark-mode .tool-icon {
+  background-color: #212121;
+}
+
+body.dark-mode .tool-name {
+  color: var(--light-color);
+}
+/* Soft Skills Section */
+.softskills-section {
+  padding: 8rem 0;
+  background-color: #f9f9f9;
+}
+
+.softskills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+.softskill-card {
+  background-color: white;
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  text-align: center;
+  transition: var(--transition);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.softskill-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.softskill-icon {
+  width: 80px;
+  height: 80px;
+  background-color: rgba(89, 81, 218, 0.1);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+  font-size: 2rem;
+  transition: var(--transition);
+}
+
+.softskill-card:hover .softskill-icon {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.softskill-title {
+  font-size: var(--font-size-large);
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+.softskill-description {
+  color: var(--dark-gray-color);
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+}
+
+/* Responsividade para a seção de soft skills */
+@media (max-width: 992px) {
+  .softskills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .softskills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Modo escuro para a seção de soft skills */
+body.dark-mode .softskills-section {
+  background-color: #1a1a1a;
+}
+
+body.dark-mode .softskill-card {
+  background-color: #212121;
+}
+
+body.dark-mode .softskill-icon {
+  background-color: rgba(165, 160, 255, 0.1);
+  color: #a5a0ff;
+}
+
+body.dark-mode .softskill-card:hover .softskill-icon {
+  background-color: #a5a0ff;
+  color: #121212;
+}
+
+body.dark-mode .softskill-title {
+  color: var(--light-color);
+}
+
+body.dark-mode .softskill-description {
+  color: #adb5bd;
 }

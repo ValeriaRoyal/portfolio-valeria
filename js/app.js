@@ -14,7 +14,34 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // Filtro de projetos
   setupProjectFilters();
+  
+  // Inicializa o Swiper para os projetos
+  setupProjectsSwiper();
 });
+
+// Configuração do Swiper para os projetos
+function setupProjectsSwiper() {
+  const projectsSwiper = new Swiper('.projects-swiper', {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: false,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    a11y: {
+      prevSlideMessage: 'Projetos anteriores',
+      nextSlideMessage: 'Próximos projetos',
+      firstSlideMessage: 'Estes são os primeiros projetos',
+      lastSlideMessage: 'Estes são os últimos projetos',
+      paginationBulletMessage: 'Ir para o grupo de projetos {{index}}',
+    }
+  });
+}
 
 // Configuração da navegação
 function setupNavigation() {
@@ -114,32 +141,27 @@ function setupProjectFilters() {
       
       const filterValue = button.getAttribute('data-filter');
       
-      // Atualiza o tabpanel
-      const projectsGrid = document.querySelector('.projects-grid');
-      if (projectsGrid) {
-        projectsGrid.setAttribute('aria-labelledby', `filter-${filterValue}`);
-      }
-      
-      // Filtra os projetos usando transições CSS
+      // Filtra os projetos
       projectCards.forEach(card => {
         if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
           card.style.display = 'block';
-          // Usa requestAnimationFrame para garantir que o display: block seja aplicado antes da transição
-          requestAnimationFrame(() => {
-            card.style.opacity = '1';
-            card.style.transform = 'scale(1)';
-          });
+          card.style.opacity = '1';
+          card.style.transform = 'scale(1)';
         } else {
           card.style.opacity = '0';
           card.style.transform = 'scale(0.8)';
-          
-          // Espera a transição terminar antes de esconder o elemento
-          card.addEventListener('transitionend', function hideCard() {
+          setTimeout(() => {
             card.style.display = 'none';
-            card.removeEventListener('transitionend', hideCard);
-          }, { once: true });
+          }, 300);
         }
       });
+      
+      // Reinicializa o Swiper para ajustar ao novo layout
+      setTimeout(() => {
+        if (window.projectsSwiper) {
+          window.projectsSwiper.update();
+        }
+      }, 350);
     });
   });
 }
