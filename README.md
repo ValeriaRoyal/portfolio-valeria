@@ -50,10 +50,8 @@ Interface de dashboard para visualização de dados e métricas de negócio.
 Aplicação web para gerenciamento de finanças pessoais com interface intuitiva para controle de receitas, despesas, orçamentos e metas financeiras.
 
 **Tecnologias:** Figma, Wireframe, UX/UI Design
-**Link:** [https://www.figma.com/proto/FXa46l3NlRTCt9KkmAjMqg/Assistente-de-plano?node-id=1-5&t=FxKqBnvhIkK1xlAh-1]([https://financas-pessoais-smoky.vercel.app/](https://www.figma.com/proto/FXa46l3NlRTCt9KkmAjMqg/Assistente-de-plano?node-id=1-5&t=FxKqBnvhIkK1xlAh-1))
-
-**Repositório:** [GitHub](https://github.com/ValeriaRoyal/financas-pessoais)
-
+**Link:** [https://www.figma.com/proto/FXa46l3NlRTCt9KkmAjMqg/Assistente-de-plano?node-id=1-5&t=FxKqBnvhIkK1xlAh-1]
+(https://www.figma.com/proto/FXa46l3NlRTCt9KkmAjMqg/Assistente-de-plano?node-id=1-5&t=FxKqBnvhIkK1xlAh-1)
 
 
 ## 💻 Habilidades Técnicas
