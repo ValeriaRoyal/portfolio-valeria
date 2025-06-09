@@ -44,7 +44,7 @@ Interface de dashboard para visualização de dados e métricas de negócio.
 
 **Tecnologias:** React 19, TypeScript, Styled Components, React Router, Chart.js
 
-**Link:** [[https://financas-pessoais-smoky.vercel.app/](https://www.figma.com/design/7kYag2apWYrPpEULHdniq6/Gerenciamento-de-d%C3%ADvidas?node-id=225-1517&t=6UWiB801UScVECyB-1)]([https://financas-pessoais-smoky.vercel.app/](https://www.figma.com/design/7kYag2apWYrPpEULHdniq6/Gerenciamento-de-d%C3%ADvidas?node-id=225-1517&t=6UWiB801UScVECyB-1))
+**Link:** [https://www.figma.com/design/7kYag2apWYrPpEULHdniq6/Gerenciamento-de-d%C3%ADvidas?node-id=225-1517&t=6UWiB801UScVECyB-1](https://www.figma.com/design/7kYag2apWYrPpEULHdniq6/Gerenciamento-de-d%C3%ADvidas?node-id=225-1517&t=6UWiB801UScVECyB-1)
 
 ### Assistente de Contratação de Plano de Internet
 Aplicação web para gerenciamento de finanças pessoais com interface intuitiva para controle de receitas, despesas, orçamentos e metas financeiras.
