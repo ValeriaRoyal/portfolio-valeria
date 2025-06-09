@@ -22,12 +22,24 @@ Este é um site de portfólio pessoal desenvolvido para mostrar projetos e habil
 - AOS (Animate On Scroll) para animações
 - Font Awesome para ícones
 - Flexbox e Grid para layouts responsivos
+- Swiper.js para carrosséis interativos
+
+### Ferramentas e Tecnologias
+- React, Vue, Angular
+- TypeScript, JavaScript
+- Node.js
+- PostgreSQL, MySQL
+- Git, GitHub
+- Figma, Adobe XD
+- Postman
+- VS Code
 
 ### Acessibilidade e Qualidade
 - Axe-core para testes de acessibilidade
 - Atributos ARIA para melhor navegação por leitores de tela
 - Contraste adequado para melhor legibilidade
 - Navegação por teclado otimizada
+- Landmarks HTML5 para estrutura semântica
 
 ## Projetos Destacados
 
@@ -56,17 +68,21 @@ Aplicativo web para gerenciamento de tarefas e aumento de produtividade.
 - `js/axe-test.js`: Testes de acessibilidade
 - `images/`: Diretório para imagens
   - `images/projects/`: Imagens dos projetos
-  - `images/brands/`: Logos de marcas e parceiros
+  - `images/tools/`: Ícones de ferramentas e tecnologias
 - `assets/`: Diretório para outros recursos (CV, documentos)
 
 ## Funcionalidades
 
 - Design totalmente responsivo para todos os dispositivos
 - Animações de scroll para melhor experiência do usuário
+- Seção de Soft Skills com cards interativos
+- Exibição de ferramentas e tecnologias em grid responsivo
+- Carrossel de projetos com 3 projetos por slide
 - Informações de contato e links para redes sociais
 - Navegação suave entre seções
 - Galeria de projetos com filtros por categoria
 - Otimização para SEO com meta tags apropriadas
+- Download de currículo diretamente da página inicial
 
 ## Como Executar
 
