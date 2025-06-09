@@ -224,6 +224,7 @@ img {
   right: 20px;
   top: 50%;
   transform: translateY(-50%);
+  z-index: 100;
 }
 
 .menu-toggle:hover {
@@ -877,8 +878,8 @@ body.dark-mode .filter-btn:focus {
   .nav-links {
     position: fixed;
     top: 80px;
-    left: -100%;
-    width: 100%;
+    right: -100%;
+    width: 80%;
     height: calc(100vh - 80px);
     background-color: var(--bg-color);
     flex-direction: column;
@@ -887,10 +888,11 @@ body.dark-mode .filter-btn:focus {
     gap: 3rem;
     transition: var(--transition);
     z-index: 99;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
   }
   
   .nav-links.active {
-    left: 0;
+    right: 0;
   }
   
   .menu-toggle {
@@ -1182,4 +1184,8 @@ body.dark-mode .softskill-title {
 
 body.dark-mode .softskill-description {
   color: #adb5bd;
+}
+body.dark-mode .nav-links {
+  background-color: #121212;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
 }
