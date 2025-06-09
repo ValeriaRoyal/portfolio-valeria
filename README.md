@@ -39,40 +39,22 @@ Aplicação web para gerenciamento de finanças pessoais com interface intuitiva
 
 **Repositório:** [GitHub](https://github.com/ValeriaRoyal/financas-pessoais)
 
-### Dashboard Analítico
-Interface de dashboard para visualização de dados e métricas de negócio, com gráficos interativos e filtros dinâmicos.
+### Dashboard para Gerenciamento de Dívidas
+Interface de dashboard para visualização de dados e métricas de negócio.
 
-**Tecnologias:** React, Chart.js, CSS Grid, Context API
+**Tecnologias:** React 19, TypeScript, Styled Components, React Router, Chart.js
 
-**Repositório:** [GitHub](https://github.com/ValeriaRoyal/dashboard-analitico)
+**Link:** [[https://financas-pessoais-smoky.vercel.app/](https://www.figma.com/design/7kYag2apWYrPpEULHdniq6/Gerenciamento-de-d%C3%ADvidas?node-id=225-1517&t=6UWiB801UScVECyB-1)]([https://financas-pessoais-smoky.vercel.app/](https://www.figma.com/design/7kYag2apWYrPpEULHdniq6/Gerenciamento-de-d%C3%ADvidas?node-id=225-1517&t=6UWiB801UScVECyB-1))
 
-### App de Produtividade
-Aplicativo web para gerenciamento de tarefas e aumento de produtividade, com funcionalidades de categorização, priorização e lembretes.
+### Assistente de Contratação de Plano de Internet
+Aplicação web para gerenciamento de finanças pessoais com interface intuitiva para controle de receitas, despesas, orçamentos e metas financeiras.
 
-**Tecnologias:** JavaScript, LocalStorage, CSS Animations, PWA
+**Tecnologias:** Figma, Wireframe, UX/UI Design
+**Link:** [https://www.figma.com/proto/FXa46l3NlRTCt9KkmAjMqg/Assistente-de-plano?node-id=1-5&t=FxKqBnvhIkK1xlAh-1]([https://financas-pessoais-smoky.vercel.app/](https://www.figma.com/proto/FXa46l3NlRTCt9KkmAjMqg/Assistente-de-plano?node-id=1-5&t=FxKqBnvhIkK1xlAh-1))
 
-**Repositório:** [GitHub](https://github.com/ValeriaRoyal/app-produtividade)
+**Repositório:** [GitHub](https://github.com/ValeriaRoyal/financas-pessoais)
 
-### Sistema de Gerenciamento de Funcionários
-Aplicação full-stack para gerenciamento de funcionários com CRUD completo, utilizando Angular no frontend e Spring Boot no backend.
 
-**Tecnologias:** Angular, TypeScript, Spring Boot, JPA, MySQL
-
-**Repositório:** [GitHub](https://github.com/ValeriaRoyal/AngularSpringBoot)
-
-### Snake Game
-Recriação do clássico jogo da cobrinha com JavaScript puro, HTML5 Canvas e CSS3.
-
-**Tecnologias:** JavaScript, HTML5 Canvas, CSS3
-
-**Repositório:** [GitHub](https://github.com/ValeriaRoyal/Snake-Game)
-
-### T-Rex Game
-Recriação do famoso jogo offline do navegador Google Chrome, desenvolvido com JavaScript puro.
-
-**Tecnologias:** JavaScript, HTML5, CSS3
-
-**Repositório:** [GitHub](https://github.com/ValeriaRoyal/T-Rex-Game)
 
 ## 💻 Habilidades Técnicas
 
@@ -81,34 +63,27 @@ Recriação do famoso jogo offline do navegador Google Chrome, desenvolvido com 
 - CSS3 (Flexbox, Grid, Animações, Variáveis)
 - JavaScript ES6+
 - TypeScript
-- React (Hooks, Context API, Redux)
+- React (Hooks, Context API)
 - Angular
 - Vue.js
 - Styled Components
-- Bootstrap, Tailwind CSS
 - Testes com Jest e React Testing Library
 
 ### Desenvolvimento Backend
 - Node.js
-- Express.js
 - API RESTful
 - Spring Boot
 - Java
-- Python
-- MongoDB
 - PostgreSQL
 - MySQL
 - Autenticação e Autorização (JWT, OAuth)
 
 ### DevOps e Ferramentas
 - Git e GitHub
-- Docker
 - CI/CD (GitHub Actions)
-- AWS (S3, EC2, Lambda)
-- Vercel, Netlify, Heroku
+- Vercel
 - Metodologias Ágeis (Scrum, Kanban)
 - Figma e Adobe XD
-- VS Code, IntelliJ IDEA
 
 ## 🤝 Soft Skills
 
@@ -120,6 +95,7 @@ Recriação do famoso jogo offline do navegador Google Chrome, desenvolvido com 
 - **Empatia**: Compreensão das necessidades dos usuários e stakeholders para criar soluções centradas no humano
 - **Pensamento Crítico**: Capacidade de analisar situações complexas e tomar decisões fundamentadas
 - **Aprendizado Contínuo**: Busca constante por novos conhecimentos e aperfeiçoamento profissional
+
 ## 🔧 Tecnologias Utilizadas
 
 ### Frontend
