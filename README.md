@@ -30,6 +30,13 @@ Com formação em desenvolvimento web e experiência em diversas tecnologias mod
 
 ## 💼 Projetos Destacados
 
+### DevAcessível
+Uma plataforma educativa para ensinar boas práticas de acessibilidade web com exemplos práticos e explicações detalhadas.
+
+**Tecnologias:** React 18, TypeScript, Styled Components, React Router, Framer Motion, React Helmet Async, Axe-core, Vite
+
+**Link:** [https://dev-acessivel.vercel.app/](https://dev-acessivel.vercel.app/)
+
 ### Finanças Pessoais
 Aplicação web para gerenciamento de finanças pessoais com interface intuitiva para controle de receitas, despesas, orçamentos e metas financeiras.
 
