@@ -18,14 +18,14 @@ document.addEventListener('DOMContentLoaded', () => {
   // Inicializa o Swiper para os projetos
   setupProjectsSwiper();
   
-  // Inicializa o Swiper para os depoimentos
-  setupTestimonialsSwiper();
-  
   // Configuração do tema claro/escuro
   setupThemeToggle();
   
   // Configuração da animação de texto digitado
   setupTypingAnimation();
+  
+  // Configuração do botão de visão
+  setupVisionToggle();
 });
 
 // Configuração do Swiper para os projetos
@@ -78,46 +78,6 @@ function setupProjectsSwiper() {
   
   // Salva a referência do swiper para uso global
   window.projectsSwiper = projectsSwiper;
-}
-
-// Configuração do Swiper para os depoimentos
-function setupTestimonialsSwiper() {
-  const testimonialsSwiper = new Swiper('.testimonials-swiper', {
-    slidesPerView: 1,
-    spaceBetween: 30,
-    loop: true,
-    autoplay: {
-      delay: 6000,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    breakpoints: {
-      // Quando a largura da tela for >= 768px
-      768: {
-        slidesPerView: 2,
-        spaceBetween: 20,
-      },
-      // Quando a largura da tela for >= 1024px
-      1024: {
-        slidesPerView: 3,
-        spaceBetween: 30,
-      },
-    },
-    a11y: {
-      prevSlideMessage: 'Depoimento anterior',
-      nextSlideMessage: 'Próximo depoimento',
-      firstSlideMessage: 'Este é o primeiro depoimento',
-      lastSlideMessage: 'Este é o último depoimento',
-      paginationBulletMessage: 'Ir para o depoimento {{index}}',
-    }
-  });
 }
 
 // Configuração da navegação
@@ -304,6 +264,50 @@ function setupThemeToggle() {
       themeIcon.classList.remove('fa-moon');
       themeIcon.classList.add('fa-sun');
       srText.textContent = 'Mudar para tema claro';
+    }
+  }
+}
+
+// Configuração do botão de visão
+function setupVisionToggle() {
+  const visionToggle = document.querySelector('.vision-toggle');
+  
+  if (!visionToggle) return;
+  
+  visionToggle.addEventListener('click', () => {
+    document.body.classList.toggle('vision-mode');
+    
+    const isVisionMode = document.body.classList.contains('vision-mode');
+    const visionIcon = visionToggle.querySelector('i');
+    const srText = visionToggle.querySelector('.sr-only');
+    
+    if (!visionIcon || !srText) return;
+    
+    if (isVisionMode) {
+      visionIcon.classList.remove('fa-eye');
+      visionIcon.classList.add('fa-eye-slash');
+      srText.textContent = 'Desativar modo de visão';
+      localStorage.setItem('vision', 'on');
+    } else {
+      visionIcon.classList.remove('fa-eye-slash');
+      visionIcon.classList.add('fa-eye');
+      srText.textContent = 'Ativar modo de visão';
+      localStorage.setItem('vision', 'off');
+    }
+  });
+  
+  // Verifica o modo de visão salvo no localStorage
+  const savedVision = localStorage.getItem('vision');
+  
+  if (savedVision === 'on') {
+    document.body.classList.add('vision-mode');
+    const visionIcon = visionToggle.querySelector('i');
+    const srText = visionToggle.querySelector('.sr-only');
+    
+    if (visionIcon && srText) {
+      visionIcon.classList.remove('fa-eye');
+      visionIcon.classList.add('fa-eye-slash');
+      srText.textContent = 'Desativar modo de visão';
     }
   }
 }

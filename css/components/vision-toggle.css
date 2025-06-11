@@ -1,0 +1,80 @@
+/* Estilos para o botão de alternância de visão */
+.vision-toggle {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 99;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.vision-toggle:hover,
+.vision-toggle:focus {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+.vision-toggle i {
+  font-size: 1.5rem;
+  transition: transform 0.5s ease;
+}
+
+.vision-toggle:hover i,
+.vision-toggle:focus i {
+  transform: rotate(360deg);
+}
+
+/* Ajustes para o modo escuro */
+body.dark-mode .vision-toggle {
+  background-color: #FF6B8B;
+  color: #121212;
+}
+
+/* Estilos para o modo de visão */
+body.vision-mode {
+  filter: grayscale(0%) contrast(120%) brightness(110%);
+}
+
+body.vision-mode .vision-toggle {
+  background-color: #00a896;
+}
+
+body.vision-mode.dark-mode .vision-toggle {
+  background-color: #00e8d1;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .vision-toggle {
+    width: 45px;
+    height: 45px;
+    bottom: 20px;
+    left: 20px;
+  }
+  
+  .vision-toggle i {
+    font-size: 1.3rem;
+  }
+}
+
+/* Preferência por movimento reduzido */
+@media (prefers-reduced-motion: reduce) {
+  .vision-toggle i {
+    transition: none;
+  }
+  
+  .vision-toggle:hover i,
+  .vision-toggle:focus i {
+    transform: none;
+  }
+}
