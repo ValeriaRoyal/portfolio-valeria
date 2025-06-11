@@ -5,9 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // Efeito de paralaxe na seção hero
   setupParallaxEffect();
-  
-  // Botão de alternância de tema
-  setupThemeToggle();
 });
 
 // Animação de texto digitado
@@ -73,49 +70,4 @@ function setupParallaxEffect() {
       heroSection.style.backgroundPositionY = `calc(50% + ${translateY}px)`;
     }
   });
-}
-
-// Configuração do tema claro/escuro
-function setupThemeToggle() {
-  const themeToggle = document.querySelector('.theme-toggle');
-  
-  if (!themeToggle) return;
-  
-  themeToggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-    
-    const isDarkMode = document.body.classList.contains('dark-mode');
-    const themeIcon = themeToggle.querySelector('i');
-    const srText = themeToggle.querySelector('.sr-only');
-    
-    if (!themeIcon || !srText) return;
-    
-    if (isDarkMode) {
-      themeIcon.classList.remove('fa-moon');
-      themeIcon.classList.add('fa-sun');
-      srText.textContent = 'Mudar para tema claro';
-      localStorage.setItem('theme', 'dark');
-    } else {
-      themeIcon.classList.remove('fa-sun');
-      themeIcon.classList.add('fa-moon');
-      srText.textContent = 'Mudar para tema escuro';
-      localStorage.setItem('theme', 'light');
-    }
-  });
-  
-  // Verifica o tema salvo no localStorage
-  const savedTheme = localStorage.getItem('theme');
-  const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  
-  if (savedTheme === 'dark' || (prefersDarkScheme && !savedTheme)) {
-    document.body.classList.add('dark-mode');
-    const themeIcon = themeToggle.querySelector('i');
-    const srText = themeToggle.querySelector('.sr-only');
-    
-    if (themeIcon && srText) {
-      themeIcon.classList.remove('fa-moon');
-      themeIcon.classList.add('fa-sun');
-      srText.textContent = 'Mudar para tema claro';
-    }
-  }
 }
