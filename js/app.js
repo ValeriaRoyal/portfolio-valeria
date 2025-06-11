@@ -24,7 +24,12 @@ function setupProjectsSwiper() {
   const projectsSwiper = new Swiper('.projects-swiper', {
     slidesPerView: 1,
     spaceBetween: 30,
-    loop: false,
+    centeredSlides: true,
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
@@ -33,14 +38,37 @@ function setupProjectsSwiper() {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
+    effect: 'coverflow',
+    coverflowEffect: {
+      rotate: 0,
+      stretch: 0,
+      depth: 100,
+      modifier: 1,
+      slideShadows: false,
+    },
+    breakpoints: {
+      // Quando a largura da tela for >= 768px
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      // Quando a largura da tela for >= 1024px
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+    },
     a11y: {
-      prevSlideMessage: 'Projetos anteriores',
-      nextSlideMessage: 'Próximos projetos',
-      firstSlideMessage: 'Estes são os primeiros projetos',
-      lastSlideMessage: 'Estes são os últimos projetos',
-      paginationBulletMessage: 'Ir para o grupo de projetos {{index}}',
+      prevSlideMessage: 'Projeto anterior',
+      nextSlideMessage: 'Próximo projeto',
+      firstSlideMessage: 'Este é o primeiro projeto',
+      lastSlideMessage: 'Este é o último projeto',
+      paginationBulletMessage: 'Ir para o projeto {{index}}',
     }
   });
+  
+  // Salva a referência do swiper para uso global
+  window.projectsSwiper = projectsSwiper;
 }
 
 // Configuração da navegação

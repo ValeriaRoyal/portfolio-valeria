@@ -1189,3 +1189,65 @@ body.dark-mode .nav-links {
   background-color: #121212;
   box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
 }
+/* Estilos para o novo layout de cards em slide */
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.swiper-slide-active .project-card {
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.projects-swiper {
+  padding: 3rem 0;
+  overflow: visible;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--primary-color);
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 1.2rem;
+}
+
+.swiper-pagination-bullet {
+  background-color: var(--primary-color);
+  opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background-color: var(--primary-color);
+}
+
+/* Ajustes para o modo escuro */
+body.dark-mode .swiper-button-next,
+body.dark-mode .swiper-button-prev {
+  background-color: rgba(33, 33, 33, 0.8);
+  color: var(--light-color);
+}
+
+/* Ajustes para responsividade */
+@media (max-width: 768px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
+  
+  .swiper-slide-active .project-card {
+    transform: scale(1.02);
+  }
+}
