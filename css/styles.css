@@ -1251,3 +1251,27 @@ body.dark-mode .swiper-button-prev {
     transform: scale(1.02);
   }
 }
+/* Estilos para o filtro de projetos */
+.hidden-slide {
+  display: none !important;
+}
+
+.no-projects-message {
+  text-align: center;
+  padding: 3rem;
+  font-size: var(--font-size-large);
+  color: var(--gray-color);
+  width: 100%;
+}
+
+body.dark-mode .no-projects-message {
+  color: #aaa;
+}
+
+/* Ajuste para o filtro ativo */
+.filter-btn.active {
+  background-color: var(--primary-color);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}

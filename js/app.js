@@ -151,9 +151,9 @@ function setupNavigation() {
 // Configuração dos filtros de projetos
 function setupProjectFilters() {
   const filterButtons = document.querySelectorAll('.filter-btn');
-  const projectCards = document.querySelectorAll('.project-card');
+  const projectSlides = document.querySelectorAll('.swiper-slide');
   
-  if (filterButtons.length === 0 || projectCards.length === 0) return;
+  if (filterButtons.length === 0 || projectSlides.length === 0) return;
   
   filterButtons.forEach(button => {
     button.addEventListener('click', () => {
@@ -169,27 +169,47 @@ function setupProjectFilters() {
       
       const filterValue = button.getAttribute('data-filter');
       
-      // Filtra os projetos
-      projectCards.forEach(card => {
-        if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
-          card.style.display = 'block';
-          card.style.opacity = '1';
-          card.style.transform = 'scale(1)';
+      // Filtra os slides de projetos
+      let visibleSlidesCount = 0;
+      
+      projectSlides.forEach((slide, index) => {
+        const projectCard = slide.querySelector('.project-card');
+        if (!projectCard) return;
+        
+        const category = projectCard.getAttribute('data-category');
+        
+        if (filterValue === 'all' || category === filterValue) {
+          slide.classList.remove('hidden-slide');
+          visibleSlidesCount++;
         } else {
-          card.style.opacity = '0';
-          card.style.transform = 'scale(0.8)';
-          setTimeout(() => {
-            card.style.display = 'none';
-          }, 300);
+          slide.classList.add('hidden-slide');
         }
       });
       
       // Reinicializa o Swiper para ajustar ao novo layout
-      setTimeout(() => {
-        if (window.projectsSwiper) {
-          window.projectsSwiper.update();
-        }
-      }, 350);
+      if (window.projectsSwiper) {
+        window.projectsSwiper.destroy();
+        
+        // Recria o Swiper apenas com os slides visíveis
+        setTimeout(() => {
+          setupProjectsSwiper();
+          
+          // Se não houver slides visíveis, mostra uma mensagem
+          const projectsContainer = document.querySelector('.projects-swiper');
+          const noProjectsMessage = document.querySelector('.no-projects-message');
+          
+          if (visibleSlidesCount === 0) {
+            if (!noProjectsMessage) {
+              const message = document.createElement('div');
+              message.className = 'no-projects-message';
+              message.textContent = 'Nenhum projeto encontrado nesta categoria.';
+              projectsContainer.appendChild(message);
+            }
+          } else if (noProjectsMessage) {
+            noProjectsMessage.remove();
+          }
+        }, 100);
+      }
     });
   });
 }
