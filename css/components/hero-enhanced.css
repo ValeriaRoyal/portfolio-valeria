@@ -104,6 +104,9 @@
   align-items: center;
   opacity: 0;
   animation: fadeIn 1s ease-out forwards 2.5s, bounce 2s infinite 3.5s;
+  width: 100%;
+  max-width: 200px;
+  text-align: center;
 }
 
 .mouse {
@@ -212,6 +215,16 @@ body.dark-mode .mouse::before {
     width: 100%;
     max-width: 300px;
     margin: 0 auto;
+  }
+  
+  .scroll-indicator {
+    bottom: 1.5rem;
+    width: 100%;
+  }
+  
+  .scroll-indicator p {
+    font-size: 0.9rem;
+    margin-top: 0.3rem;
   }
 }
 
