@@ -1,0 +1,67 @@
+/* Estilos para o botão de alternância de tema */
+.theme-toggle {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 99;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+.theme-toggle i {
+  font-size: 1.5rem;
+  transition: transform 0.5s ease;
+}
+
+.theme-toggle:hover i,
+.theme-toggle:focus i {
+  transform: rotate(360deg);
+}
+
+/* Ajustes para o modo escuro */
+body.dark-mode .theme-toggle {
+  background-color: #a5a0ff;
+  color: #121212;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .theme-toggle {
+    width: 45px;
+    height: 45px;
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  .theme-toggle i {
+    font-size: 1.3rem;
+  }
+}
+
+/* Preferência por movimento reduzido */
+@media (prefers-reduced-motion: reduce) {
+  .theme-toggle i {
+    transition: none;
+  }
+  
+  .theme-toggle:hover i,
+  .theme-toggle:focus i {
+    transform: none;
+  }
+}

@@ -1,0 +1,51 @@
+<svg width="1440" height="900" viewBox="0 0 1440 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g opacity="0.2">
+    <path d="M0 0H1440V900H0V0Z" fill="#121212"/>
+    <path d="M1440 0H0V900H1440V0Z" fill="url(#paint0_linear)"/>
+    <path d="M1440 0H0V900H1440V0Z" fill="url(#paint1_radial)"/>
+    <g opacity="0.4">
+      <path d="M1376.5 216.5C1376.5 236.106 1360.61 252 1341 252C1321.39 252 1305.5 236.106 1305.5 216.5C1305.5 196.894 1321.39 181 1341 181C1360.61 181 1376.5 196.894 1376.5 216.5Z" stroke="#A5A0FF"/>
+      <path d="M1341 252C1360.61 252 1376.5 236.106 1376.5 216.5C1376.5 196.894 1360.61 181 1341 181C1321.39 181 1305.5 196.894 1305.5 216.5C1305.5 236.106 1321.39 252 1341 252Z" stroke="#A5A0FF"/>
+      <path d="M1341 252C1360.61 252 1376.5 236.106 1376.5 216.5C1376.5 196.894 1360.61 181 1341 181C1321.39 181 1305.5 196.894 1305.5 216.5C1305.5 236.106 1321.39 252 1341 252Z" stroke="#A5A0FF"/>
+    </g>
+    <g opacity="0.4">
+      <path d="M191.5 667.5C191.5 687.106 175.606 703 156 703C136.394 703 120.5 687.106 120.5 667.5C120.5 647.894 136.394 632 156 632C175.606 632 191.5 647.894 191.5 667.5Z" stroke="#FF6B8B"/>
+      <path d="M156 703C175.606 703 191.5 687.106 191.5 667.5C191.5 647.894 175.606 632 156 632C136.394 632 120.5 647.894 120.5 667.5C120.5 687.106 136.394 703 156 703Z" stroke="#FF6B8B"/>
+      <path d="M156 703C175.606 703 191.5 687.106 191.5 667.5C191.5 647.894 175.606 632 156 632C136.394 632 120.5 647.894 120.5 667.5C120.5 687.106 136.394 703 156 703Z" stroke="#FF6B8B"/>
+    </g>
+    <path d="M1232 759L1232 759.01L1232.01 759.01L1232.01 759L1232 759Z" stroke="#A5A0FF" stroke-width="40"/>
+    <path d="M264 216L264 216.01L264.01 216.01L264.01 216L264 216Z" stroke="#A5A0FF" stroke-width="40"/>
+    <path d="M1114 544L1114 544.01L1114.01 544.01L1114.01 544L1114 544Z" stroke="#FF6B8B" stroke-width="20"/>
+    <path d="M412 873L412 873.01L412.01 873.01L412.01 873L412 873Z" stroke="#FF6B8B" stroke-width="20"/>
+    <path d="M189 432L189 432.01L189.01 432.01L189.01 432L189 432Z" stroke="#A5A0FF" stroke-width="12"/>
+    <path d="M1177 338L1177 338.01L1177.01 338.01L1177.01 338L1177 338Z" stroke="#A5A0FF" stroke-width="12"/>
+    <path d="M694 39L694 39.01L694.01 39.01L694.01 39L694 39Z" stroke="#FF6B8B" stroke-width="12"/>
+    <path d="M1293 544L1293 544.01L1293.01 544.01L1293.01 544L1293 544Z" stroke="#FF6B8B" stroke-width="12"/>
+    <path d="M816 873L816 873.01L816.01 873.01L816.01 873L816 873Z" stroke="#A5A0FF" stroke-width="12"/>
+    <path d="M1293 117L1293 117.01L1293.01 117.01L1293.01 117L1293 117Z" stroke="#FF6B8B" stroke-width="6"/>
+    <path d="M87 775L87 775.01L87.01 775.01L87.01 775L87 775Z" stroke="#FF6B8B" stroke-width="6"/>
+    <path d="M600 775L600 775.01L600.01 775.01L600.01 775L600 775Z" stroke="#A5A0FF" stroke-width="6"/>
+    <path d="M1028 117L1028 117.01L1028.01 117.01L1028.01 117L1028 117Z" stroke="#A5A0FF" stroke-width="6"/>
+    <path d="M87 117L87 117.01L87.01 117.01L87.01 117L87 117Z" stroke="#FF6B8B" stroke-width="6"/>
+    <path d="M1028 775L1028 775.01L1028.01 775.01L1028.01 775L1028 775Z" stroke="#FF6B8B" stroke-width="6"/>
+    <path d="M600 117L600 117.01L600.01 117.01L600.01 117L600 117Z" stroke="#A5A0FF" stroke-width="6"/>
+    <path d="M1293 775L1293 775.01L1293.01 775.01L1293.01 775L1293 775Z" stroke="#A5A0FF" stroke-width="6"/>
+    <path d="M87 338L87 338.01L87.01 338.01L87.01 338L87 338Z" stroke="#FF6B8B" stroke-width="6"/>
+    <path d="M1028 338L1028 338.01L1028.01 338.01L1028.01 338L1028 338Z" stroke="#FF6B8B" stroke-width="6"/>
+    <path d="M600 338L600 338.01L600.01 338.01L600.01 338L600 338Z" stroke="#A5A0FF" stroke-width="6"/>
+    <path d="M1293 338L1293 338.01L1293.01 338.01L1293.01 338L1293 338Z" stroke="#A5A0FF" stroke-width="6"/>
+    <path d="M87 544L87 544.01L87.01 544.01L87.01 544L87 544Z" stroke="#FF6B8B" stroke-width="6"/>
+    <path d="M1028 544L1028 544.01L1028.01 544.01L1028.01 544L1028 544Z" stroke="#FF6B8B" stroke-width="6"/>
+    <path d="M600 544L600 544.01L600.01 544.01L600.01 544L600 544Z" stroke="#A5A0FF" stroke-width="6"/>
+  </g>
+  <defs>
+    <linearGradient id="paint0_linear" x1="720" y1="0" x2="720" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A5A0FF" stop-opacity="0.1"/>
+      <stop offset="1" stop-color="#A5A0FF" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="paint1_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(720 450) rotate(90) scale(450 720)">
+      <stop stop-color="#FF6B8B" stop-opacity="0.1"/>
+      <stop offset="1" stop-color="#FF6B8B" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+</svg>

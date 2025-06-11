@@ -17,6 +17,15 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // Inicializa o Swiper para os projetos
   setupProjectsSwiper();
+  
+  // Inicializa o Swiper para os depoimentos
+  setupTestimonialsSwiper();
+  
+  // Configuração do tema claro/escuro
+  setupThemeToggle();
+  
+  // Configuração da animação de texto digitado
+  setupTypingAnimation();
 });
 
 // Configuração do Swiper para os projetos
@@ -69,6 +78,46 @@ function setupProjectsSwiper() {
   
   // Salva a referência do swiper para uso global
   window.projectsSwiper = projectsSwiper;
+}
+
+// Configuração do Swiper para os depoimentos
+function setupTestimonialsSwiper() {
+  const testimonialsSwiper = new Swiper('.testimonials-swiper', {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    autoplay: {
+      delay: 6000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      // Quando a largura da tela for >= 768px
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      // Quando a largura da tela for >= 1024px
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+    },
+    a11y: {
+      prevSlideMessage: 'Depoimento anterior',
+      nextSlideMessage: 'Próximo depoimento',
+      firstSlideMessage: 'Este é o primeiro depoimento',
+      lastSlideMessage: 'Este é o último depoimento',
+      paginationBulletMessage: 'Ir para o depoimento {{index}}',
+    }
+  });
 }
 
 // Configuração da navegação
@@ -214,122 +263,6 @@ function setupProjectFilters() {
   });
 }
 
-// Configuração do formulário de contato
-function setupContactForm() {
-  const contactForm = document.querySelector('#contactForm');
-  
-  if (!contactForm) return;
-  
-  contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    // Validação do formulário
-    const name = contactForm.querySelector('#name');
-    const email = contactForm.querySelector('#email');
-    const message = contactForm.querySelector('#message');
-    
-    if (!name.value.trim()) {
-      showFormError(name, 'Por favor, informe seu nome');
-      return;
-    }
-    
-    if (!email.value.trim()) {
-      showFormError(email, 'Por favor, informe seu email');
-      return;
-    }
-    
-    if (!isValidEmail(email.value)) {
-      showFormError(email, 'Por favor, informe um email válido');
-      return;
-    }
-    
-    if (!message.value.trim()) {
-      showFormError(message, 'Por favor, escreva uma mensagem');
-      return;
-    }
-    
-    // Simulação de envio bem-sucedido
-    const formData = new FormData(contactForm);
-    const formValues = Object.fromEntries(formData.entries());
-    
-    console.log('Formulário enviado:', formValues);
-    
-    // Feedback visual
-    const submitButton = contactForm.querySelector('button[type="submit"]');
-    if (!submitButton) return;
-    
-    const originalText = submitButton.textContent;
-    
-    submitButton.disabled = true;
-    submitButton.textContent = 'Enviando...';
-    
-    // Aqui você pode adicionar a lógica para enviar o formulário
-    // Por exemplo, usando fetch para enviar os dados para um backend
-    
-    // Simulação de envio
-    setTimeout(() => {
-      showFormSuccess();
-      contactForm.reset();
-      submitButton.disabled = false;
-      submitButton.textContent = originalText;
-    }, 1500);
-  });
-  
-  // Limpa mensagens de erro quando o usuário começa a digitar
-  const inputs = contactForm.querySelectorAll('input, textarea');
-  inputs.forEach(input => {
-    input.addEventListener('input', () => {
-      clearFormError(input);
-    });
-  });
-  
-  function showFormError(input, message) {
-    clearFormError(input);
-    
-    const formGroup = input.closest('.form-group');
-    formGroup.classList.add('error');
-    
-    const errorMessage = document.createElement('div');
-    errorMessage.className = 'error-message';
-    errorMessage.textContent = message;
-    errorMessage.setAttribute('aria-live', 'polite');
-    
-    formGroup.appendChild(errorMessage);
-    input.setAttribute('aria-invalid', 'true');
-    input.focus();
-  }
-  
-  function clearFormError(input) {
-    const formGroup = input.closest('.form-group');
-    formGroup.classList.remove('error');
-    
-    const errorMessage = formGroup.querySelector('.error-message');
-    if (errorMessage) {
-      formGroup.removeChild(errorMessage);
-    }
-    
-    input.setAttribute('aria-invalid', 'false');
-  }
-  
-  function showFormSuccess() {
-    const successMessage = document.createElement('div');
-    successMessage.className = 'success-message';
-    successMessage.textContent = 'Mensagem enviada com sucesso! Obrigado pelo contato.';
-    successMessage.setAttribute('aria-live', 'polite');
-    
-    contactForm.insertAdjacentElement('beforebegin', successMessage);
-    
-    setTimeout(() => {
-      successMessage.remove();
-    }, 5000);
-  }
-  
-  function isValidEmail(email) {
-    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(email).toLowerCase());
-  }
-}
-
 // Configuração do tema claro/escuro
 function setupThemeToggle() {
   const themeToggle = document.querySelector('.theme-toggle');
@@ -373,6 +306,57 @@ function setupThemeToggle() {
       srText.textContent = 'Mudar para tema claro';
     }
   }
+}
+
+// Configuração da animação de texto digitado
+function setupTypingAnimation() {
+  const typedElement = document.querySelector('.typed-text');
+  if (!typedElement) return;
+  
+  // Verifica se o usuário prefere movimento reduzido
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReducedMotion) return;
+  
+  const phrases = JSON.parse(typedElement.getAttribute('data-typed-items'));
+  if (!phrases || !phrases.length) return;
+  
+  let currentPhraseIndex = 0;
+  let currentCharIndex = 0;
+  let isDeleting = false;
+  let typingSpeed = 100;
+  
+  function type() {
+    const currentPhrase = phrases[currentPhraseIndex];
+    
+    if (isDeleting) {
+      // Deletando texto
+      typedElement.textContent = currentPhrase.substring(0, currentCharIndex - 1);
+      currentCharIndex--;
+      typingSpeed = 50; // Mais rápido ao deletar
+    } else {
+      // Digitando texto
+      typedElement.textContent = currentPhrase.substring(0, currentCharIndex + 1);
+      currentCharIndex++;
+      typingSpeed = 100; // Mais lento ao digitar
+    }
+    
+    // Lógica para alternar entre digitar e deletar
+    if (!isDeleting && currentCharIndex === currentPhrase.length) {
+      // Terminou de digitar, aguarda um pouco antes de começar a deletar
+      isDeleting = true;
+      typingSpeed = 1000; // Pausa antes de começar a deletar
+    } else if (isDeleting && currentCharIndex === 0) {
+      // Terminou de deletar, passa para a próxima frase
+      isDeleting = false;
+      currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
+      typingSpeed = 500; // Pausa antes de começar a próxima frase
+    }
+    
+    setTimeout(type, typingSpeed);
+  }
+  
+  // Inicia a animação
+  setTimeout(type, 1000);
 }
 
 // Adiciona acessibilidade ao teclado para elementos interativos

@@ -1,0 +1,134 @@
+/* Estilos para a seção de depoimentos */
+.testimonials-section {
+  padding: 8rem 0;
+  background-color: #f9f9f9;
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonials-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/images/pattern-dots.svg');
+  background-repeat: repeat;
+  opacity: 0.05;
+  z-index: 0;
+}
+
+.testimonials-container {
+  position: relative;
+  z-index: 1;
+}
+
+.testimonials-swiper {
+  width: 100%;
+  padding-bottom: 60px;
+}
+
+.testimonial-card {
+  background-color: white;
+  border-radius: var(--border-radius);
+  padding: 2.5rem;
+  box-shadow: var(--shadow);
+  position: relative;
+  transition: var(--transition);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.testimonial-quote {
+  font-size: 4rem;
+  color: var(--primary-color);
+  opacity: 0.2;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  line-height: 1;
+}
+
+.testimonial-text {
+  font-size: var(--font-size-medium);
+  line-height: 1.8;
+  color: var(--dark-gray-color);
+  margin-bottom: 2rem;
+  font-style: italic;
+  position: relative;
+  z-index: 1;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+}
+
+.testimonial-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 1rem;
+  border: 3px solid var(--primary-color);
+}
+
+.testimonial-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.testimonial-info h4 {
+  font-size: var(--font-size-base);
+  margin-bottom: 0.3rem;
+}
+
+.testimonial-info p {
+  font-size: var(--font-size-small);
+  color: var(--gray-color);
+}
+
+/* Ajustes para o modo escuro */
+body.dark-mode .testimonials-section {
+  background-color: #1a1a1a;
+}
+
+body.dark-mode .testimonial-card {
+  background-color: #212121;
+}
+
+body.dark-mode .testimonial-text {
+  color: #adb5bd;
+}
+
+body.dark-mode .testimonial-info h4 {
+  color: var(--light-color);
+}
+
+body.dark-mode .testimonial-info p {
+  color: #adb5bd;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .testimonial-card {
+    padding: 2rem;
+  }
+  
+  .testimonial-text {
+    font-size: var(--font-size-base);
+  }
+  
+  .testimonial-quote {
+    font-size: 3rem;
+  }
+}

@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Valéria | Desenvolvedora Front-end</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/components/hero-enhanced.css">
+    <link rel="stylesheet" href="css/components/theme-toggle.css">
+    <link rel="stylesheet" href="css/components/testimonials.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,8 +25,6 @@
     <!-- Favicon -->
     <link rel="icon" href="images/favicon.ico">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-    
-    <script src="js/app.js"></script>
 </head>
 <body>
     <div id="app">
@@ -35,6 +36,7 @@
                     <li><a href="#softskills" class="nav-link">Soft Skills</a></li>
                     <li><a href="#ferramentas" class="nav-link">Ferramentas</a></li>
                     <li><a href="#projetos" class="nav-link">Projetos</a></li>
+                    <li><a href="#depoimentos" class="nav-link">Depoimentos</a></li>
                     <li><a href="#contato" class="nav-link">Contato</a></li>
                 </ul>
                 <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-links">
@@ -46,10 +48,10 @@
 
         <main>
             <section id="home" class="hero-section">
-                <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+                <div class="hero-content">
                     <h1 class="hero-title">Olá, eu sou <span class="highlight">Valéria</span></h1>
                     <h2 class="hero-subtitle">Software Engineer - UX/UI</h2>
-                    <p class="hero-description">Criando experiências digitais acessíveis e intuitivas</p>
+                    <p class="hero-description">Criando <span class="typed-text" data-typed-items='["experiências digitais acessíveis", "interfaces intuitivas", "soluções inovadoras", "produtos de qualidade"]'>experiências digitais acessíveis</span><span class="typed-cursor">|</span></p>
                     <div class="hero-buttons">
                         <a href="#projetos" class="btn btn-primary">Ver Projetos</a>
                         <a href="assets/CV_ValeriaRegina.pdf" class="btn btn-outline" download>Download CV</a>
@@ -348,6 +350,90 @@
                 </div>
             </section>
 
+            <section id="depoimentos" class="testimonials-section">
+                <div class="container testimonials-container">
+                    <h2 class="section-title" data-aos="fade-up">Depoimentos</h2>
+                    <p class="section-description" data-aos="fade-up" data-aos-delay="200">
+                        O que as pessoas dizem sobre meu trabalho e colaboração em projetos.
+                    </p>
+                    
+                    <!-- Swiper container para depoimentos -->
+                    <div class="swiper testimonials-swiper" data-aos="fade-up" data-aos-delay="300">
+                        <div class="swiper-wrapper">
+                            <!-- Depoimento 1 -->
+                            <div class="swiper-slide">
+                                <div class="testimonial-card">
+                                    <div class="testimonial-quote" aria-hidden="true">
+                                        <i class="fas fa-quote-left"></i>
+                                    </div>
+                                    <p class="testimonial-text">
+                                        A Valéria demonstrou um compromisso excepcional com a acessibilidade em nosso projeto. Sua atenção aos detalhes e conhecimento técnico transformaram completamente a experiência do usuário em nossa plataforma.
+                                    </p>
+                                    <div class="testimonial-author">
+                                        <div class="testimonial-avatar">
+                                            <img src="images/testimonials/person1.jpg" alt="Foto de Mariana Silva" loading="lazy">
+                                        </div>
+                                        <div class="testimonial-info">
+                                            <h4>Mariana Silva</h4>
+                                            <p>Gerente de Produto, TechSolutions</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Depoimento 2 -->
+                            <div class="swiper-slide">
+                                <div class="testimonial-card">
+                                    <div class="testimonial-quote" aria-hidden="true">
+                                        <i class="fas fa-quote-left"></i>
+                                    </div>
+                                    <p class="testimonial-text">
+                                        Trabalhar com a Valéria foi uma experiência incrível. Sua capacidade de traduzir requisitos complexos em soluções elegantes e funcionais é impressionante. Além disso, sua comunicação clara facilitou todo o processo de desenvolvimento.
+                                    </p>
+                                    <div class="testimonial-author">
+                                        <div class="testimonial-avatar">
+                                            <img src="images/testimonials/person2.jpg" alt="Foto de Carlos Mendes" loading="lazy">
+                                        </div>
+                                        <div class="testimonial-info">
+                                            <h4>Carlos Mendes</h4>
+                                            <p>CTO, Inovação Digital</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Depoimento 3 -->
+                            <div class="swiper-slide">
+                                <div class="testimonial-card">
+                                    <div class="testimonial-quote" aria-hidden="true">
+                                        <i class="fas fa-quote-left"></i>
+                                    </div>
+                                    <p class="testimonial-text">
+                                        A abordagem da Valéria para resolver problemas é verdadeiramente única. Ela não apenas entrega código de alta qualidade, mas também traz ideias inovadoras que agregam valor real ao produto final. Sua expertise em acessibilidade web foi fundamental para nosso sucesso.
+                                    </p>
+                                    <div class="testimonial-author">
+                                        <div class="testimonial-avatar">
+                                            <img src="images/testimonials/person3.jpg" alt="Foto de Juliana Costa" loading="lazy">
+                                        </div>
+                                        <div class="testimonial-info">
+                                            <h4>Juliana Costa</h4>
+                                            <p>Líder de Design, WebCreative</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Adicionar paginação -->
+                        <div class="swiper-pagination"></div>
+                        
+                        <!-- Adicionar navegação -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+            </section>
+
             <section id="contato" class="contact-section">
                 <div class="container">
                     <h2 class="section-title" data-aos="fade-up">Entre em Contato</h2>
@@ -382,10 +468,18 @@
         </footer>
     </div>
 
+    <!-- Botão de alternância de tema -->
+    <button class="theme-toggle" aria-label="Alternar tema claro/escuro">
+        <i class="fas fa-moon" aria-hidden="true"></i>
+        <span class="sr-only">Mudar para tema escuro</span>
+    </button>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axe-core/4.7.0/axe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/axe-test.js"></script>
-    <script type="module" src="js/app.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/particles.js"></script>
 </body>
 </html>
