@@ -832,7 +832,8 @@ body.dark-mode .contact-link {
 body.dark-mode .filter-btn:hover,
 body.dark-mode .filter-btn.active,
 body.dark-mode .filter-btn:focus {
-  color: #a5a0ff; /* Cor mais clara para melhorar contraste no modo escuro */
+  color: white; /* Cor mais clara para melhorar contraste no modo escuro */
+  background-color: #3b348c; /* Cor mais escura para melhorar contraste */
 }
 
 /* Responsividade */
@@ -1274,4 +1275,11 @@ body.dark-mode .no-projects-message {
   color: white;
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  font-weight: 700;
+}
+
+/* Ajuste para garantir contraste adequado no modo escuro */
+body.dark-mode .filter-btn.active {
+  background-color: #3b348c; /* Cor mais escura para melhorar contraste */
+  color: white;
 }
